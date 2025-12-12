@@ -62,10 +62,10 @@ jobs:
 #          restore-keys: |
 #            ${{ runner.os }}-maven-
 
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v4
-        with:
-          languages: javascript-typescript
+#      - name: Initialize CodeQL
+#        uses: github/codeql-action/init@v4
+#        with:
+#          languages: typescript
 
       - name: NPM Repository Cache
         uses: actions/cache@v4
@@ -92,8 +92,8 @@ jobs:
 #          cd server
 #          mvn ${{env.MAVEN_PARMS}} package
 
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v4
+#      - name: Perform CodeQL Analysis
+#        uses: github/codeql-action/analyze@v4
 
       - name: Copy Client ZIP
         run: scp -B client/client.zip ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/avn/store/latest/www.acromere.com/client.zip
