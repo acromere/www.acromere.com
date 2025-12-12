@@ -32,16 +32,16 @@ jobs:
       - name: Fetch sources
         uses: actions/checkout@v5
 
-      - name: Fetch CI/CD resources
-        uses: actions/checkout@v5
-        with:
-          repository: acromere/canoe
-          path: .github
-
-      - name: Configuration
-        shell: bash
-        run: |
-          source .github/config.sh
+#      - name: Fetch CI/CD resources
+#        uses: actions/checkout@v5
+#        with:
+#          repository: acromere/canoe
+#          path: .github
+#
+#      - name: Configuration
+#        shell: bash
+#        run: |
+#          source .github/config.sh
 
 #      # Required to render the product icon
 #      - name: Set up Virtual Display
@@ -103,5 +103,5 @@ jobs:
 #          scp -B server/target/main/images/acromere-dark.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/avn/store/stable/acromere/provider-dark.png
 #          scp -B server/target/main/images/acromere-light.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/avn/store/stable/acromere/provider-light.png
 
-      - name: Update the Website Client
-        run: ssh ${{env.ACM_CI_USERNAME}}@acromere.com /home/ecco/bin/update-acromere-website-client
+#      - name: Update the Website Client
+#        run: ssh ${{env.ACM_CI_USERNAME}}@acromere.com /home/ecco/bin/update-acromere-website-client
