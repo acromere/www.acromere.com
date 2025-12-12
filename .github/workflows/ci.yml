@@ -95,8 +95,8 @@ jobs:
 #      - name: Perform CodeQL Analysis
 #        uses: github/codeql-action/analyze@v4
 
-      - name: Copy Client ZIP
-        run: scp -B client/client.zip ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/avn/store/latest/www.acromere.com/client.zip
+#      - name: Copy Client ZIP
+#        run: scp -B client/client.zip ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/avn/store/latest/www.acromere.com/client.zip
 
 #      - name: Copy Server JAR
 #        run: scp -B server/target/acromere.jar ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/avn/store/latest/www.acromere.com/server.jar
