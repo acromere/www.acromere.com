@@ -77,7 +77,8 @@ jobs:
 
       - name: Build Client
         run: |
-          npm build
+          rm -rf dist/
+          npm run build
           zip -r client.zip dist/*
 #          cd client
 #          npm install-clean
