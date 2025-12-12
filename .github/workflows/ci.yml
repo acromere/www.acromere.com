@@ -78,6 +78,7 @@ jobs:
       - name: Build Client
         run: |
           rm -rf dist/
+          npm install
           npm run build
           zip -r client.zip dist/*
 #          cd client
