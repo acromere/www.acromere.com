@@ -96,16 +96,16 @@ jobs:
 #        uses: github/codeql-action/analyze@v4
 
 #      - name: Copy Client ZIP
-#        run: scp -B client/client.zip ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/avn/store/latest/www.acromere.com/client.zip
+#        run: scp -B client.zip ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/store/latest/www.acromere.com/client.zip
 
 #      - name: Copy Server JAR
-#        run: scp -B server/target/acromere.jar ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/avn/store/latest/www.acromere.com/server.jar
+#        run: scp -B server/target/acromere.jar ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/store/latest/www.acromere.com/server.jar
 #
 #      - name: Copy Provider Icon
 #        run: |
-#          scp -B server/target/main/images/acromere.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/avn/store/stable/acromere/provider.png
-#          scp -B server/target/main/images/acromere-dark.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/avn/store/stable/acromere/provider-dark.png
-#          scp -B server/target/main/images/acromere-light.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/avn/store/stable/acromere/provider-light.png
+#          scp -B server/target/main/images/acromere.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/store/stable/acromere/provider.png
+#          scp -B server/target/main/images/acromere-dark.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/store/stable/acromere/provider-dark.png
+#          scp -B server/target/main/images/acromere-light.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/store/stable/acromere/provider-light.png
 
 #      - name: Update the Website Client
 #        run: ssh ${{env.ACM_CI_USERNAME}}@acromere.com /home/ecco/bin/update-acromere-website-client
