@@ -65,7 +65,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v4
         with:
-          languages: ${{ matrix.language }}
+          languages: 'javascript'
 
       - name: NPM Repository Cache
         uses: actions/cache@v4
