@@ -38,10 +38,10 @@ jobs:
           repository: acromere/canoe
           path: .github
 
-#      - name: Configuration
-#        shell: bash
-#        run: |
-#          source .github/config.sh
+      - name: Configuration
+        shell: bash
+        run: |
+          source .github/config.sh
 
 #      # Required to render the product icon
 #      - name: Set up Virtual Display
