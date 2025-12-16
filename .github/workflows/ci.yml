@@ -107,5 +107,5 @@ jobs:
 #          scp -B server/target/main/images/acromere-dark.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/stable/acromere/provider-dark.png
 #          scp -B server/target/main/images/acromere-light.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/stable/acromere/provider-light.png
 
-#      - name: Update the Website Client
-#        run: ssh ${{env.ACM_CI_USERNAME}}@acromere.com /home/ecco/bin/update-acromere-website-client
+      - name: Update the Website Client
+        run: ssh ${{env.ACM_CI_USERNAME}}@acromere.com /home/${{env.ACM_CI_USERNAME}}/bin/update-acromere-website-client
