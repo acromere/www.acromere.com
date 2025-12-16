@@ -80,12 +80,9 @@ jobs:
           rm -rf dist/
           npm install
           npm run build
-          zip -r client.zip dist/*
-#          cd client
-#          npm install-clean
-#          npm run-script build
-#          cd build
-#          zip -r ../client.zip *
+          cd dist
+          zip -r ../client.zip *
+          cd -
 
 #      - name: Build Server
 #        run: |
