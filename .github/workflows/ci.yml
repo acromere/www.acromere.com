@@ -108,4 +108,4 @@ jobs:
 #          scp -B server/target/main/images/acromere-light.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/stable/acromere/provider-light.png
 
       - name: Update the Website Client
-        run: ssh ${{env.ACM_CI_USERNAME}}@acromere.com /home/${{env.ACM_CI_USERNAME}}/bin/update-acromere-website-client
+        run: ssh ${{env.ACM_CI_USERNAME}}@acromere.com bin/update-acromere-website-client
