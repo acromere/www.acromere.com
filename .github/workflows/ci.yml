@@ -88,11 +88,11 @@ jobs:
       - name: Copy Client ZIP
         run: scp -B client.zip ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/latest/www.acromere.com/client.zip
 
-#      - name: Copy Provider Icon
-#        run: |
-#          scp -B server/target/main/images/acromere.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/stable/acromere/provider.png
-#          scp -B server/target/main/images/acromere-dark.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/stable/acromere/provider-dark.png
-#          scp -B server/target/main/images/acromere-light.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/stable/acromere/provider-light.png
+      #      - name: Copy Provider Icon
+      #        run: |
+      #          scp -B server/target/main/images/acromere.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/stable/acromere/provider.png
+      #          scp -B server/target/main/images/acromere-dark.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/stable/acromere/provider-dark.png
+      #          scp -B server/target/main/images/acromere-light.png ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/stable/acromere/provider-light.png
 
       - name: Update the Website Client
         run: ssh ${{env.ACM_CI_USERNAME}}@acromere.com bin/update-acromere-website-client
@@ -147,5 +147,5 @@ jobs:
       #      - name: Perform CodeQL Analysis
       #        uses: github/codeql-action/analyze@v4
 
-      - name: Copy Server JAR
-        run: scp -B server/target/acromere.jar ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/latest/www.acromere.com/server.jar
+      #      - name: Copy Server JAR
+      #        run: scp -B server/target/acromere.jar ${{env.ACM_CI_USERNAME}}@acromere.com:/opt/acm/repo/latest/www.acromere.com/server.jar
