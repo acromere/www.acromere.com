@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.acromere.pom</groupId>
+        <artifactId>web</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.acromere</groupId>
+    <artifactId>website</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Acromere Website</name>
+    <description>The Acromere website</description>
+    <inceptionYear>2025</inceptionYear>
+
+    <repositories>
+        <repository>
+            <id>acm</id>
+            <url>https://repo.acromere.com/acm</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>acm-plugin</id>
+            <url>https://repo.acromere.com/acm</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>com.acromere</groupId>-->
+<!--            <artifactId>zenna</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.acromere</groupId>-->
+<!--            <artifactId>zarra</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.acromere</groupId>-->
+<!--            <artifactId>zevra</artifactId>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.23.4</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>acromere</finalName>
+
+        <plugins>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                    <addResources>true</addResources>
+                </configuration>
+            </plugin>
+
+<!--            <plugin>-->
+<!--                <groupId>com.acromere</groupId>-->
+<!--                <artifactId>cameo</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>render-images</id>-->
+<!--                        <phase>prepare-package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>render</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    <images>-->
+<!--                        <image>-->
+<!--                            <class>com.acromere.zenna.icon.WingDiscLargeIcon</class>-->
+<!--                            <target>${images-folder}/acromere.png</target>-->
+<!--                            <theme>dark</theme>-->
+<!--                        </image>-->
+<!--                        <image>-->
+<!--                            <class>com.acromere.zenna.icon.WingDiscLargeIcon</class>-->
+<!--                            <target>${images-folder}/acromere-dark.png</target>-->
+<!--                            <theme>dark</theme>-->
+<!--                        </image>-->
+<!--                        <image>-->
+<!--                            <class>com.acromere.zenna.icon.WingDiscLargeIcon</class>-->
+<!--                            <target>${images-folder}/acromere-light.png</target>-->
+<!--                            <theme>light</theme>-->
+<!--                        </image>-->
+<!--                        <image>-->
+<!--                            <class>com.acromere.zenna.icon.WingDiscLargeIcon</class>-->
+<!--                            <target>${images-folder}/acromere-avatar.png</target>-->
+<!--                            <theme>light</theme>-->
+<!--                            <offsetX>64</offsetX>-->
+<!--                            <offsetY>64</offsetY>-->
+<!--                            <imageWidth>384</imageWidth>-->
+<!--                            <imageHeight>384</imageHeight>-->
+<!--                        </image>-->
+<!--                        <image>-->
+<!--                            <class>com.acromere.zenna.icon.WingDiscLargeIcon</class>-->
+<!--                            <target>${images-folder}/acromere-avatar-circle.png</target>-->
+<!--                            <theme>light</theme>-->
+<!--                            &lt;!&ndash; center the icon in the image &ndash;&gt;-->
+<!--                            <offsetX>64</offsetX>-->
+<!--                            &lt;!&ndash; just a little above center for circle avatars &ndash;&gt;-->
+<!--                            <offsetY>40</offsetY>-->
+<!--                            <imageWidth>384</imageWidth>-->
+<!--                            <imageHeight>384</imageHeight>-->
+<!--                        </image>-->
+<!--                    </images>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>acm-release</id>
+            <url>https://repo.acromere.com/acm-release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>acm-snapshot</id>
+            <url>https://repo.acromere.com/acm-snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>
