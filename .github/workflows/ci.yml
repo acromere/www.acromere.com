@@ -100,6 +100,8 @@ jobs:
   server:
     name: Server
     runs-on: ubuntu-latest
+    permissions:
+      security-events: read
     steps:
       - name: Fetch sources
         uses: actions/checkout@v6
