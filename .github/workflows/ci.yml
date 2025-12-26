@@ -139,10 +139,10 @@ jobs:
         with:
           languages: java
 
-      #      - name: Build Server
-      #        run: |
-      #          cd server
-      #          mvn ${{env.MAVEN_PARMS}} package
+      - name: Build Server
+        run: |
+          cd server
+          mvn ${{env.MAVEN_PARMS}} package
 
       #      - name: Perform CodeQL Analysis
       #        uses: github/codeql-action/analyze@v4
