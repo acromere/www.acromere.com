@@ -101,6 +101,9 @@ jobs:
     name: Server
     runs-on: ubuntu-latest
     permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
       security-events: read
     steps:
       - name: Fetch sources
