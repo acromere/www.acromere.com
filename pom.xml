@@ -134,7 +134,7 @@
                             <imageHeight>384</imageHeight>
                         </image>
                         <image>
-                            <class>com.acromere.zenna.icon.WingDiscLargeIcon</class>
+                            <class>com.acromere.zenna.icon.AcromereIcon</class>
                             <target>${images-folder}/acromere-avatar-circle.png</target>
                             <theme>light</theme>
                             <!-- center the icon in the image -->
