@@ -1,8 +1,7 @@
 # www.acromere.com
 The Acromere website
 
-[![Build Status](https://github.com/acromere/acromere.com/workflows/CI/badge.svg)](https://github.com/acromere/acromere.com/actions)
-[![Coverage Status](https://coveralls.io/repos/github/acromere/acromere.com/badge.svg?branch=main)](https://coveralls.io/github/acromere/acromere.com?branch=main)
+[![Build Status](https://github.com/acromere/www.acromere.com/actions/workflows/ci.yml/badge.svg)](https://github.com/acromere/acromere.com/actions)
 
 # Front End
 
