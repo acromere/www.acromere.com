@@ -1,8 +1,36 @@
+:root {
+  --primary-color: #206080;
+  --primary-tint: #3194c6;
+  --primary-shade: #184860;
+
+  --primary-black: #505860;
+  --primary-gray: #b0b0b0;
+  --primary-white: #e0e0e0;
+
+  --secondary-black: #606870;
+  --secondary-gray: #c0c0c0;
+  --secondary-white: #f0f0f0;
+
+  --text-black: var(--primary-black);
+  --text-white: var(--primary-white);
+
+  --monospaced-font: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 html {
   color-scheme: light dark;
   font-family: system-ui;
+  height: 100%;
   display: flex;
   align-items: start;
   justify-content: center;
-  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: light-dark( var(--text-black), var(--text-white) );
+  background-color: light-dark( var(--primary-white), var(--primary-black ));
 }
