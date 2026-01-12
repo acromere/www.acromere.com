@@ -208,3 +208,26 @@ pre {
 .menu a.banner {
 	margin-right: 1rem;
 }
+
+.footer {
+	color: var(--text-white);
+	background-color: var(--primary-color);
+	align-self: stretch;
+
+	/* Match this with the header */
+	padding: 0.2rem 2rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer .tag-line {
+}
+
+.footer .copyright {
+}
+
+.footer .copyright a, .copyright a:hover {
+	color: var(--text-white);
+}

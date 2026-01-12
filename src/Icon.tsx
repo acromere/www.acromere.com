@@ -4,8 +4,8 @@ export class Icon {
 
 	static LOGO = (
 					<picture>
-						<source srcSet={Icon.LOGO_LIGHT} media="(prefers-color-scheme: light)"/>
-						<source srcSet={Icon.LOGO_DARK} media="(prefers-color-scheme: dark)"/>
+						<source srcSet={Icon.LOGO_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
+						<source srcSet={Icon.LOGO_DARK.toString()} media="(prefers-color-scheme: dark)"/>
 						<img src="." alt="ACM"/>
 					</picture>
 	)
