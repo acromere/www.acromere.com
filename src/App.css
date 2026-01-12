@@ -122,6 +122,11 @@ pre {
 	background-color: #C0C00020;
 }
 
+.row {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
 .content {
 	display: flex;
 	flex-flow: column nowrap;
@@ -145,7 +150,7 @@ pre {
 	align-items: stretch;
 }
 
-.logo {
+.banner {
 	height: 2.5rem;
 	margin: 0 0 0 0;
 
@@ -155,14 +160,14 @@ pre {
 	align-items: stretch;
 }
 
-.logo img {
+.banner img {
 	margin: 0 0.5rem 0 0;
 	width: 2rem;
 	height: 2rem;
 	vertical-align: text-top;
 }
 
-.logo a {
+.banner a {
 	color: light-dark( var(--text-black), var(--text-white) );
 
 	/* Height is determined by the menu height */
@@ -203,4 +208,3 @@ pre {
 .menu a.banner {
 	margin-right: 1rem;
 }
-
