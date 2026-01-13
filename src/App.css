@@ -1,4 +1,3 @@
-
 /*
 206080
 Tints: #206080 #297aa3 #3194c6 #50a7d3 #73b9dc #96cbe5 #b9dced #dcedf6 #ffffff
@@ -16,41 +15,41 @@ Shades: #804020 #70381c #603018 #502814 #402010 #30180c #201008 #100804 #000000
 }
 
 :root {
-  --primary-color: #206080;
-  --primary-tint: #3194c6;
-  --primary-shade: #184860;
+	--primary-color: #206080;
+	--primary-tint: #3194c6;
+	--primary-shade: #184860;
 
-  --primary-black: #505860;
-  --primary-gray: #b0b0b0;
-  --primary-white: #e0e0e0;
+	--primary-black: #505860;
+	--primary-gray: #b0b0b0;
+	--primary-white: #e0e0e0;
 
-  --secondary-black: #606870;
-  --secondary-gray: #c0c0c0;
-  --secondary-white: #f0f0f0;
+	--secondary-black: #606870;
+	--secondary-gray: #c0c0c0;
+	--secondary-white: #f0f0f0;
 
-  --text-black: var(--primary-black);
-  --text-white: var(--primary-white);
+	--text-black: var(--primary-black);
+	--text-white: var(--primary-white);
 
-  --monospaced-font: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+	--monospaced-font: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 html {
-  color-scheme: light dark;
-  font-family: system-ui;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	color-scheme: light dark;
+	font-family: system-ui;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 	min-width: 100vw;
 	min-height: 100vh;
-  color: light-dark( var(--text-black), var(--text-white) );
-  background-color: light-dark( var(--primary-white), var(--primary-black ));
+	color: light-dark(var(--text-black), var(--text-white));
+	background-color: light-dark(var(--primary-white), var(--primary-black));
 }
 
 h1 {
@@ -111,7 +110,7 @@ code {
 
 pre {
 	font-family: var(--monospaced-font), monospace;
-	background-color: light-dark( var(--secondary-white), var(--secondary-black) );
+	background-color: light-dark(var(--secondary-white), var(--secondary-black));
 	display: block;
 	margin-top: 0.25rem;
 	padding: 0.25rem;
@@ -127,16 +126,17 @@ pre {
 	flex-flow: row nowrap;
 }
 
-.content {
+.app {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: center;
+	min-height: 100vh;
 }
 
 .header {
-	color: light-dark( var(--text-black), var(--text-white) );
-	background-color: light-dark( var(--primary-color), var(--primary-color ));
+	color: light-dark(var(--text-black), var(--text-white));
+	background-color: light-dark(var(--primary-color), var(--primary-color));
 
 	font-family: sansation, sans-serif;
 
@@ -150,7 +150,7 @@ pre {
 	align-items: stretch;
 }
 
-.banner {
+.marquee {
 	height: 2.5rem;
 	margin: 0 0 0 0;
 
@@ -160,15 +160,15 @@ pre {
 	align-items: stretch;
 }
 
-.banner img {
+.marquee img {
 	margin: 0 0.5rem 0 0;
 	width: 2rem;
 	height: 2rem;
 	vertical-align: text-top;
 }
 
-.banner a {
-	color: light-dark( var(--text-black), var(--text-white) );
+.marquee a {
+	color: light-dark(var(--text-black), var(--text-white));
 
 	/* Height is determined by the menu height */
 	padding: 0 0.5rem;
@@ -190,7 +190,7 @@ pre {
 }
 
 .menu a {
-	color: light-dark( var(--text-black), var(--text-white) );
+	color: light-dark(var(--text-black), var(--text-white));
 
 	/* Height is determined by the menu height */
 	padding: 0 0.5rem;
@@ -202,13 +202,14 @@ pre {
 }
 
 .menu a:hover {
-	background: light-dark( var(--primary-tint), var(--primary-tint) );
+	background: light-dark(var(--primary-tint), var(--primary-tint));
 }
 
-.menu a.banner {
+.menu a.marquee {
 	margin-right: 1rem;
 }
 
+.app
 .footer {
 	color: var(--text-white);
 	background-color: var(--primary-color);
