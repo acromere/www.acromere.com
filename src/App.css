@@ -11,9 +11,6 @@ Shades: #804020 #70381c #603018 #502814 #402010 #30180c #201008 #100804 #000000
 /*@font-face {*/
 /*	font-family: sansation;*/
 /*	font-weight: normal;*/
-/*	src: url('./font/sansation/Sansation-Regular.ttf');*/
-/*}*/
-
 :root {
 	--primary-base: #206080;
 
@@ -24,7 +21,6 @@ Shades: #804020 #70381c #603018 #502814 #402010 #30180c #201008 #100804 #000000
 	--primary-tint-5: #96cbe5;
 	--primary-tint-6: #b9dced;
 	--primary-tint-7: #dcedf6;
-	/*--primary-tint-8: #ffffff;*/
 
 	--primary-shade-1: #1c5470;
 	--primary-shade-2: #184860;
@@ -52,15 +48,6 @@ Shades: #804020 #70381c #603018 #502814 #402010 #30180c #201008 #100804 #000000
 	--inverse-shade-6: #201008;
 	--inverse-shade-7: #100804;
 
-	--primary-color: #206080;
-	--primary-tint: #3194c6;
-	--primary-shade: #184860;
-
-	--anchor-light: var(--primary-color);
-	--anchor-light-hover: var(--primary-tint);
-	--anchor-dark: #70b0d0;
-	--anchor-dark-hover: #90d0f0;
-
 	--gray-1: #101010;
 	--gray-2: #202020;
 	--gray-3: #303030;
@@ -77,24 +64,31 @@ Shades: #804020 #70381c #603018 #502814 #402010 #30180c #201008 #100804 #000000
 	--gray-14: #e0e0e0;
 	--gray-15: #f0f0f0;
 
+	--primary-light: var(--primary-tint-4);
+	--primary-dark: var(--primary-base);
+	--primary-tint-light: var(--primary-tint-5);
+	--primary-tint-dark: var(--primary-tint-1);
+	--primary-shade-light: var(--primary-tint-2);
+	--primary-shade-dark: var(--primary-shade-2);
 
+	--anchor-light: var(--primary-base);
+	--anchor-light-hover: var(--primary-tint-2);
+	--anchor-dark: var(--primary-tint-4);
+	--anchor-dark-hover: var(--primary-tint-5);
 
-	--primary-black: var(--gray-5);
-	--primary-gray: var(--gray-11);
-	--primary-white: var(--gray-14);
-
-	--secondary-black: var(--gray-6);
-	--secondary-gray: var(--gray-12);
-	--secondary-white: var(--gray-15);
-
-	--text-black: var(--primary-black);
-	--text-white: var(--primary-white);
+	--text-light: var(--gray-5);
+	--text-dark: var(--gray-14);
 
 	--background-light: var(--gray-14);
 	--background-dark: var(--gray-5);
+	--background-secondary-light: var(--gray-15);
+	--background-secondary-dark: var(--gray-6);
 
 	--monospaced-font: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+/*	src: url('./font/sansation/Sansation-Regular.ttf');*/
+
+/*}*/
 
 html {
 	color-scheme: light dark;
@@ -111,7 +105,7 @@ body {
 	padding: 0;
 	min-width: 100vw;
 	min-height: 100vh;
-	color: light-dark(var(--text-black), var(--text-white));
+	color: light-dark(var(--text-light), var(--text-dark));
 	background-color: light-dark(var(--background-light), var(--background-dark));
 }
 
@@ -179,7 +173,7 @@ code {
 
 pre {
 	font-family: var(--monospaced-font), monospace;
-	background-color: light-dark(var(--secondary-white), var(--secondary-black));
+	background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
 	display: block;
 	margin-top: 0.25rem;
 	padding: 0.25rem;
@@ -209,8 +203,8 @@ img.icon {
 }
 
 .header {
-	color: light-dark(var(--text-black), var(--text-white));
-	background-color: light-dark(var(--primary-color), var(--primary-color));
+	color: light-dark(var(--text-light), var(--text-dark));
+	background-color: light-dark(var(--primary-light), var(--primary-dark));
 
 	font-family: sansation, sans-serif;
 
@@ -240,7 +234,7 @@ img.icon {
 }
 
 .marquee a {
-	color: light-dark(var(--text-black), var(--text-white));
+	color: light-dark(var(--text-light), var(--text-dark));
 
 	/* Height is determined by the menu height */
 	padding: 0 0.5rem;
@@ -262,7 +256,7 @@ img.icon {
 }
 
 .menu a {
-	color: light-dark(var(--text-black), var(--text-white));
+	color: light-dark(var(--text-light), var(--text-dark));
 
 	/* Height is determined by the menu height */
 	padding: 0 0.5rem;
@@ -274,7 +268,7 @@ img.icon {
 }
 
 .menu a:hover {
-	background: light-dark(var(--primary-tint), var(--primary-tint));
+	background: light-dark(var(--primary-tint-light), var(--primary-tint-dark));
 }
 
 .menu a.marquee {
@@ -306,8 +300,8 @@ img.icon {
 }
 
 .footer {
-	color: var(--text-white);
-	background-color: var(--primary-color);
+	color: light-dark(var(--text-light), var(--text-dark));
+	background-color: light-dark(var(--primary-light), var(--primary-dark));
 	align-self: stretch;
 
 	/* Match this with the header */
@@ -324,6 +318,7 @@ img.icon {
 .footer .copyright {
 }
 
-.footer .copyright a, .copyright a:hover {
-	color: var(--text-white);
+.footer a, .footer a:hover {
+	/* Override the standard anchor colors */
+	color: light-dark(var(--text-light), var(--text-dark));
 }
