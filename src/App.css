@@ -8,11 +8,11 @@ Tints: #804020 #a35229 #c66331 #d37c50 #dc9673 #e5b096 #edcbb9 #f6e5dc #ffffff
 Shades: #804020 #70381c #603018 #502814 #402010 #30180c #201008 #100804 #000000
 */
 
-@font-face {
-	font-family: sansation;
-	font-weight: normal;
-	src: url('./font/sansation/Sansation-Regular.ttf');
-}
+/*@font-face {*/
+/*	font-family: sansation;*/
+/*	font-weight: normal;*/
+/*	src: url('./font/sansation/Sansation-Regular.ttf');*/
+/*}*/
 
 :root {
 	--primary-color: #206080;
