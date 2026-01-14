@@ -208,17 +208,28 @@ pre {
 	margin-right: 1rem;
 }
 
-.content {
+/* Eventually rename to .content and rename .content below*/
+.router {
 	flex-grow: 1;
 
 	display: flex;
 	flex-flow: column nowrap;
-
-	/*align-self: stretch;*/
 }
 
-.page {
-	/*align-self: stretch;*/
+/* Eventually rename to .page and rename .router above*/
+.content {
+	max-width: 80rem;
+	min-width: 10rem;
+
+	padding: 1rem;
+
+	/* flex child constraints */
+	flex: 100 1 auto;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .footer {

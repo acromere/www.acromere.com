@@ -5,7 +5,7 @@ import NotFound from './NotFound';
 
 export function Content() {
   return (
-    <div className='content'>
+    <div className='router'>
       <Router>
         <Routes>
           <Route path='/' element={<Home/>}/>
