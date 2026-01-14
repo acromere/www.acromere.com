@@ -116,6 +116,11 @@ pre {
 	padding: 0.25rem;
 }
 
+img.icon {
+	width: 1em;
+	height: 1em;
+}
+
 .debug {
 	border: #FFFF0080 solid 1px;
 	background-color: #C0C00020;
@@ -156,14 +161,13 @@ pre {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-evenly;
-	align-items: stretch;
+	align-items: center;
 }
 
-.marquee img {
-	margin: 0 0.5rem 0 0;
+.marquee .icon {
+	display: block;
 	width: 2rem;
 	height: 2rem;
-	vertical-align: text-top;
 }
 
 .marquee a {

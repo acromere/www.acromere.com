@@ -16,9 +16,10 @@ export default function NotFound() {
             get you back on track:
           </p>
           <div>
-            <a href='/'><h3><img style={{height: '1em'}} alt="" src={Icon.LOGO}/> Avereon Home Page</h3></a>
-            <a href='/product/xenon'><h3><img style={{height: '1em'}} alt="" src={Icon.XENON}/> Avereon Xenon</h3></a>
-            <a href='/products'><h3><img style={{height: '1em'}} alt="" src={Icon.LOGO}/> Other Products</h3></a>
+            <a href='/'><h3>{Icon.LOGO} Avereon Home Page</h3></a>
+            <a href='/product/xenon'><h3>{Icon.XENON} Avereon Xenon</h3></a>
+            <a href='/products'><h3>{Icon.LOGO} Other Products</h3>
+            </a>
           </div>
         </div>
       </div>

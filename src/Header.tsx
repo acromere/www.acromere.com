@@ -6,7 +6,7 @@ export function Header() {
       <div className='header'>
         <div className='row'>
           <div className='marquee'>
-            <a href="/">{Icon.LOGO}Acromere</a>
+            <a href="/">{Icon.LOGO}&nbsp;Acromere</a>
           </div>
           <div className='menu'>
             <a href='/products'>Products</a>
