@@ -1,6 +1,9 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router'
+
 import Home from './Home';
+import Legal from './Legal';
+import Mit from './license/Mit';
 import NotFound from './NotFound';
 
 export function Content() {
@@ -9,6 +12,10 @@ export function Content() {
       <Router>
         <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/legal' element={<Legal/>}/>
+          <Route path='/license'>
+            <Route path='mit' element={<Mit/>}/>
+          </Route>
 
           {/* Default route */}
           <Route path='*' element={<NotFound/>}/>

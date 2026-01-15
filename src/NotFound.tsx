@@ -16,8 +16,8 @@ export default function NotFound() {
             get you back on track:
           </p>
           <div>
-            <a href='/'><h3>{Icon.LOGO} Avereon Home Page</h3></a>
-            <a href='/product/xenon'><h3>{Icon.XENON} Avereon Xenon</h3></a>
+            <a href='/'><h3>{Icon.LOGO} Acromere Home Page</h3></a>
+            <a href='/product/xenon'><h3>{Icon.XENON} Acromere Xenon</h3></a>
             <a href='/products'><h3>{Icon.OTHER} Other Products</h3>
             </a>
           </div>

@@ -1,0 +1,31 @@
+import CopyrightText from './CopyrightText';
+
+export default function Legal() {
+  return (
+    <div className='content'>
+      <h1>Legal Notices</h1>
+
+      <div>
+        <h4>Copyright</h4>
+        <p><CopyrightText/></p>
+
+        <h4>Attribution</h4>
+        <p>
+          This web site uses the superb <a href='https://www.fontspace.com/bernd-montag/sansation'>Sansation</a> font
+          created by Bernd Motag.
+        </p>
+
+        <h4>Trademarks</h4>
+        <p>
+          Java and OpenJDK are trademarks or registered trademarks of Oracle
+          and/or its affiliates. Other names may be trademarks of their
+          respective owners.
+        </p>
+
+        <h4>Licenses</h4>
+        <p>
+          All Acromere products are licensed under the <a href='/license/mit'>MIT License</a>.
+        </p>
+      </div>
+    </div>)
+}
