@@ -1,0 +1,123 @@
+:root {
+	--primary-stable-color: #208060;
+	--primary-stable-tint: #288868;
+
+	--primary-latest-color: #c06000;
+	--primary-latest-tint: #c86808;
+
+	--primary-disabled-color: #808080;
+}
+
+.product {
+	margin: 1rem;
+	width: 50rem;
+
+	/* flex child constraints */
+	flex: 100 1 auto;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+.product table {
+	display: table; border-collapse: separate; border-spacing: 2px;
+	background-color: light-dark(var(--background-secondary-light), var(--background-secondary-dark));
+}
+
+.product tbody {
+	display: table-row-group; vertical-align: middle; border-color: inherit;
+}
+
+.product td {
+	display: table-cell; vertical-align: inherit;
+	background-color: light-dark(var(--background-light), var(--background-dark));
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.product-title {
+	margin: 0.5rem;
+	display: flex;
+	flex-flow: row nowrap;
+	/* along the main axis */
+	justify-content: center;
+	/* along the cross axis */
+	align-items: center;
+}
+
+.product .body .icon {
+	width: 6rem;
+	height: 6rem;
+}
+
+.product-icon .icon {
+	width: 4rem;
+	height: 4rem;
+}
+
+.product-name {
+	font-size: 3rem;
+	margin: 0 0 0 1rem;
+}
+
+.product-bar {
+	width: 100%;
+	text-align: justify;
+	margin: 1rem 0;
+
+	display: flex;
+	flex-flow: row nowrap;
+	/* along the main axis */
+	justify-content: left;
+	/* along the cross axis */
+	align-items: stretch;
+}
+
+.product-bar .body {
+	padding: 0 0 0 1rem;
+	display: flex;
+	flex-flow: column nowrap;
+	/* along the main axis */
+	justify-content: flex-start;
+	/* along the cross axis */
+	align-items: flex-start;
+}
+
+.product-bar .body div {
+	padding: 0.5rem 0 0.5rem 0;
+}
+
+.product-bar .item {
+	padding: 0 0 0 1rem;
+	display: flex;
+	flex-flow: column nowrap;
+	/* along the main axis */
+	justify-content: center;
+	/* along the cross axis */
+	align-items: flex-start;
+}
+
+.product-header {
+	font-size: 1.5rem;
+}
+
+.product-content {
+	text-align: justify;
+	padding: 0.5rem;
+}
+
+.product-status {
+	width: 25rem;
+
+	/* flex child constraints */
+	flex: 100 1 auto;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+}
