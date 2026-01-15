@@ -179,11 +179,6 @@ pre {
 	padding: 0.25rem;
 }
 
-img.icon {
-	width: 1em;
-	height: 1em;
-}
-
 .debug {
 	border: #FFFF0080 solid 1px;
 	background-color: #C0C00020;
@@ -200,6 +195,16 @@ img.icon {
 	justify-content: space-between;
 	align-items: center;
 	min-height: 100vh;
+}
+
+.icon {
+	width: 1em;
+	height: 1em;
+}
+
+/* Icons in headers should have the normal text color */
+h1 .icon, h2 .icon, h3 .icon, h4 .icon, h5 .icon, h6 .icon {
+	color: light-dark(var(--text-light), var(--text-dark));
 }
 
 .header {

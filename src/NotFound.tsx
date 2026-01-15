@@ -18,7 +18,7 @@ export default function NotFound() {
           <div>
             <a href='/'><h3>{Icon.LOGO} Avereon Home Page</h3></a>
             <a href='/product/xenon'><h3>{Icon.XENON} Avereon Xenon</h3></a>
-            <a href='/products'><h3>{Icon.LOGO} Other Products</h3>
+            <a href='/products'><h3>{Icon.OTHER} Other Products</h3>
             </a>
           </div>
         </div>
