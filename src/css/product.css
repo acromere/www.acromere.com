@@ -50,20 +50,6 @@
 	align-items: center;
 }
 
-.standalone-icon {
-	display: flex;
-	flex-flow: row nowrap;
-	/* along the main axis */
-	justify-content: center;
-	/* along the cross axis */
-	align-items: center;
-}
-
-.product .standalone-icon .icon {
-	width: 6rem;
-	height: 6rem;
-}
-
 .product .product-icon .icon {
 	width: 4rem;
 	height: 4rem;

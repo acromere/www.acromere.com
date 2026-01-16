@@ -3,9 +3,9 @@ import {Icon} from "./Icon.tsx";
 
 export default function About() {
   return (
-    <div className='content product'>
+    <div className='product'>
 
-      <span className='column standalone-icon'>{Icon.ACROMERE}</span>
+      <span className='page-icon centered-items'>{Icon.ACROMERE}</span>
 
       <div className='product-bar'>
         <span className="product-icon">{Icon.EMPTY}</span>

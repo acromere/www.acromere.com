@@ -309,6 +309,30 @@ h1 .icon, h2 .icon, h3 .icon, h4 .icon, h5 .icon, h6 .icon {
 	align-items: center;
 }
 
+.page-icon {
+	/* Requires centered items */
+	display: flex;
+	flex-flow: row nowrap;
+	/* along the main axis */
+	justify-content: center;
+	/* along the cross axis */
+	align-items: center;
+}
+
+.page-icon .icon {
+	width: 8rem;
+	height: 8rem;
+}
+
+.centered-items {
+	display: flex;
+	flex-flow: row nowrap;
+	/* along the main axis */
+	justify-content: center;
+	/* along the cross axis */
+	align-items: center;
+}
+
 .footer {
 	color: light-dark(var(--text-light), var(--text-dark));
 	background-color: light-dark(var(--primary-light), var(--primary-dark));
