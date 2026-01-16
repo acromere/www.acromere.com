@@ -86,6 +86,7 @@ Shades: #804020 #70381c #603018 #502814 #402010 #30180c #201008 #100804 #000000
 
 	--monospaced-font: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
 /*	src: url('./font/sansation/Sansation-Regular.ttf');*/
 
 /*}*/
@@ -180,8 +181,12 @@ pre {
 }
 
 .debug {
-	border: #FFFF0080 solid 1px;
-	background-color: #C0C00020;
+	border: var(--inverse-tint-2) solid 1px;
+	background-color: var(--inverse-shade-2);
+}
+
+.nowrap {
+	white-space: nowrap;
 }
 
 .row {

@@ -1,11 +1,12 @@
 import './css/product.css';
-
 import {Icon} from "./Icon.tsx";
 
 export default function About() {
   return (
     <div className='content product'>
-      <span className='body'>{Icon.ACROMERE}</span>
+
+      <span className='column standalone-icon'>{Icon.ACROMERE}</span>
+
       <div className='product-bar'>
         <span className="product-icon">{Icon.EMPTY}</span>
         <div className='body'>
@@ -46,6 +47,7 @@ export default function About() {
           </div>
         </div>
       </div>
+
     </div>
   )
 }
