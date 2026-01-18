@@ -1,4 +1,4 @@
-import {Icon} from './Icon.tsx';
+import Icon from './Icon.tsx';
 
 export function Header() {
   return (

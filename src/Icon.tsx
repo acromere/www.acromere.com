@@ -1,4 +1,3 @@
-import React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {library as FontAwesomeLibrary} from '@fortawesome/fontawesome-svg-core'
 import {fas} from '@fortawesome/free-solid-svg-icons'
@@ -7,7 +6,7 @@ import {fab} from '@fortawesome/free-brands-svg-icons'
 
 FontAwesomeLibrary.add(fas, far, fab)
 
-export class Icon {
+export default class Icon {
   /* URL Definitions */
   static ACROMERE_DARK = new URL('./image/acromere-dark.png', import.meta.url);
   static ACROMERE_LIGHT = new URL('./image/acromere-light.png', import.meta.url);
@@ -24,6 +23,8 @@ export class Icon {
       <img src="." className='icon' alt="ACM"/>
     </picture>
   )
+  static BROKEN = <FontAwesomeIcon className='icon broken' icon={['fas', 'link-slash']}/>;
+  static CARTA = Icon.BROKEN;
   static EMPTY = <img src={Icon.EMPTY_PIXEL.toString()} className='icon' alt=''/>
   static FROWN = <FontAwesomeIcon className='icon' icon={['fas', 'frown']}/>;
   static LOGO = Icon.ACROMERE;

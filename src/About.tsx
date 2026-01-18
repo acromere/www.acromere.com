@@ -1,5 +1,5 @@
 import './css/product.css';
-import {Icon} from "./Icon.tsx";
+import Icon from "./Icon.tsx";
 
 export default function About() {
   return (

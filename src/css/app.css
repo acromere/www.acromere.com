@@ -207,6 +207,10 @@ pre {
 	height: 1em;
 }
 
+.icon.broken {
+	color: red;
+}
+
 /* Icons in headers should have the normal text color */
 h1 .icon, h2 .icon, h3 .icon, h4 .icon, h5 .icon, h6 .icon {
 	color: light-dark(var(--text-light), var(--text-dark));
@@ -331,6 +335,52 @@ h1 .icon, h2 .icon, h3 .icon, h4 .icon, h5 .icon, h6 .icon {
 	justify-content: center;
 	/* along the cross axis */
 	align-items: center;
+}
+
+.announcement-table {
+	display: table;
+}
+
+.announcement-row {
+	display: table-row;
+}
+
+.announcement-cell {
+	display: table-cell;
+	vertical-align: top;
+	padding: 0.5rem;
+}
+
+.announcement-title {
+	font-size: 3em;
+}
+
+.announcement-body {
+	margin: 0 0 0 0.5rem;
+}
+
+.screenshot-home img {
+	width: 20rem;
+	height: 12.5rem;
+	border: 1px transparent solid;
+}
+
+.screenshot-home:hover img {
+	border: 1px solid;
+}
+
+div.screenshot-tile {
+	width: 20rem;
+}
+
+link.screenshot-tile {
+	cursor: pointer;
+	border: 1px transparent solid;
+}
+
+link.screenshot-tile:hover {
+	cursor: pointer;
+	border: 1px solid;
 }
 
 .footer {
