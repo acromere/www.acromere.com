@@ -194,6 +194,17 @@ pre {
 	flex-flow: row nowrap;
 }
 
+.columns {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.column {
+	flex: 1 1;
+}
+
 .app {
 	display: flex;
 	flex-flow: column nowrap;
