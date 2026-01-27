@@ -14,8 +14,12 @@ export default class Icon {
   static XENON_LIGHT = new URL('./image/xenon-light.png', import.meta.url);
   static EMPTY_PIXEL = new URL('./image/empty-pixel.png', import.meta.url);
 
+  // Needs to be defined before other icons
+  static BROKEN = <FontAwesomeIcon className='icon broken' icon={['fas', 'link-slash']}/>;
+
   /* Icon Definitions (Alphabetical order) */
 
+  static ACORN = Icon.BROKEN;
   static ACROMERE = (
     <picture>
       <source srcSet={Icon.ACROMERE_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
@@ -23,12 +27,19 @@ export default class Icon {
       <img src="." className='icon' alt="ACM"/>
     </picture>
   )
-  static BROKEN = <FontAwesomeIcon className='icon broken' icon={['fas', 'link-slash']}/>;
+  static AVEON = Icon.BROKEN;
   static CARTA = Icon.BROKEN;
+  static CAMEO = Icon.BROKEN;
+  static CUREX = Icon.BROKEN;
+  static CURVE = Icon.BROKEN;
   static EMPTY = <img src={Icon.EMPTY_PIXEL.toString()} className='icon' alt=''/>
   static FROWN = <FontAwesomeIcon className='icon' icon={['fas', 'frown']}/>;
   static LOGO = Icon.ACROMERE;
+  static MAZER = Icon.BROKEN;
   static OTHER = <FontAwesomeIcon className='icon' icon={['fas', 'ellipsis']}/>;
+  static RECON = Icon.BROKEN;
+  static SEENC = Icon.BROKEN;
+  static WEAVE = Icon.BROKEN;
   static XENON = (
     <picture>
       <source srcSet={Icon.XENON_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
@@ -36,4 +47,8 @@ export default class Icon {
       <img src="." className='icon' alt="ACM"/>
     </picture>
   )
+  static ZARRA = Icon.BROKEN;
+  static ZENNA = Icon.BROKEN;
+  static ZERRA = Icon.BROKEN;
+  static ZEVRA = Icon.BROKEN;
 }

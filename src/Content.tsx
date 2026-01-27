@@ -6,6 +6,7 @@ import Home from './Home';
 import Legal from './Legal';
 import Mit from './license/Mit';
 import NotFound from './NotFound';
+import Status from './project/Status';
 
 export function Content() {
   return (
@@ -17,6 +18,11 @@ export function Content() {
           <Route path='/legal' element={<Legal/>}/>
           <Route path='/license'>
             <Route path='mit' element={<Mit/>}/>
+          </Route>
+
+          <Route path='projects' element={<Status/>}/>
+          <Route path='/project'>
+            <Route path='status' element={<Status/>}/>
           </Route>
 
           {/* Default route */}
