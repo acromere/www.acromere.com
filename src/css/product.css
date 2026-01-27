@@ -10,7 +10,7 @@
 
 .product {
 	margin: 1rem;
-	width: 50rem;
+	max-width: 50rem;
 
 	/* flex child constraints */
 	flex: 100 1 auto;
