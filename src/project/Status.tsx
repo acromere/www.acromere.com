@@ -1,8 +1,7 @@
 import Icon from "../Icon.tsx";
 import {ReactElement} from "react";
 
-function ProductStatus(props: { ident: string; icon: ReactElement<any,any>; name: string; }) {
-
+function ProductStatus(props: { ident: string; icon: ReactElement<any, any>; name: string; }) {
   return (
     <div className='product-bar'>
       <a href={"https://github.com/acromere/" + props.ident}>
@@ -16,7 +15,6 @@ function ProductStatus(props: { ident: string; icon: ReactElement<any,any>; name
       </div>
     </div>
   )
-
 }
 
 export default function Status() {
