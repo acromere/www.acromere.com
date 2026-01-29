@@ -107,7 +107,8 @@
 }
 
 .product-status {
-	width: 25rem;
+	max-width: 25rem;
+	padding: 0 2rem;
 
 	/* flex child constraints */
 	flex: 100 1 auto;
