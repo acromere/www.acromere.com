@@ -186,7 +186,7 @@ public class V2DownloadControllerTest {
 		assertThat( result.getResponse().getHeader( "version" ), is( "0.0u0" ) );
 
 		assertThat( result.getResponse().getContentType(), is( "application/json" ) );
-		assertThat( result.getResponse().getContentLength(), is( 427 ) );
+		assertThat( result.getResponse().getContentLength(), is( 429 ) );
 	}
 
 	@Test
@@ -209,7 +209,7 @@ public class V2DownloadControllerTest {
 		assertThat( map.get( "version" ), is( "0.0u0-g" ) );
 
 		assertThat( result.getResponse().getContentType(), is( "application/json" ) );
-		assertThat( result.getResponse().getContentLength(), is( 449 ) );
+		assertThat( result.getResponse().getContentLength(), is( 451 ) );
 	}
 
 	@Test
@@ -243,7 +243,7 @@ public class V2DownloadControllerTest {
 		assertThat( result.getResponse().getHeader( "version" ), is( "0.0u0" ) );
 
 		assertThat( result.getResponse().getContentType(), is( "application/json" ) );
-		assertThat( result.getResponse().getContentLength(), is( 429 ) );
+		assertThat( result.getResponse().getContentLength(), is( 431 ) );
 	}
 
 	@Test
