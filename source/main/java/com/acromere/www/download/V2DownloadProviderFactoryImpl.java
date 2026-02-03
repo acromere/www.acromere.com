@@ -14,8 +14,8 @@ public class V2DownloadProviderFactoryImpl implements V2DownloadProviderFactory 
 	public Map<String, V2DownloadProvider> getProviders() {
 		if( providers == null ) {
 			this.providers = new ConcurrentHashMap<>();
-			providers.put( "stable", new V2LocalDownloadProvider( "/opt/avn/store/stable" ) );
-			providers.put( "latest", new V2LocalDownloadProvider( "/opt/avn/store/latest" ) );
+			providers.put( "stable", new V2LocalDownloadProvider( "/opt/acm/repo/stable" ) );
+			providers.put( "latest", new V2LocalDownloadProvider( "/opt/acm/repo/latest" ) );
 		}
 		return providers;
 	}

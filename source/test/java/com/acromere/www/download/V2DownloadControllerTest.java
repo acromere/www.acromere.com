@@ -39,7 +39,7 @@ public class V2DownloadControllerTest {
 
 	@BeforeEach
 	public void setup() {
-		Path root = Paths.get( "source/test/repos/avn" ).toAbsolutePath();
+		Path root = Paths.get( "source/test/repos/acm" ).toAbsolutePath();
 		Map<String, V2DownloadProvider> providers = new HashMap<>();
 		providers.put( "stable", new V2LocalDownloadProvider( root.resolve( "stable" ) ) );
 		providers.put( "latest", new V2LocalDownloadProvider( root.resolve( "latest" ) ) );
@@ -186,7 +186,7 @@ public class V2DownloadControllerTest {
 		assertThat( result.getResponse().getHeader( "version" ), is( "0.0u0" ) );
 
 		assertThat( result.getResponse().getContentType(), is( "application/json" ) );
-		assertThat( result.getResponse().getContentLength(), is( 429 ) );
+		assertThat( result.getResponse().getContentLength(), is( 442 ) );
 	}
 
 	@Test
@@ -204,12 +204,12 @@ public class V2DownloadControllerTest {
 		assertThat( result.getResponse().getHeader( "version" ), is( "0.0u0-g" ) );
 
 		String content = result.getResponse().getContentAsString();
-		Map<String, String> map = content == null ? Map.of() : new ObjectMapper().readValue( content, Map.class );
+		Map<String, String> map = new ObjectMapper().readValue( content, Map.class );
 		assertThat( map.get( "theme" ), is( "grey" ) );
 		assertThat( map.get( "version" ), is( "0.0u0-g" ) );
 
 		assertThat( result.getResponse().getContentType(), is( "application/json" ) );
-		assertThat( result.getResponse().getContentLength(), is( 451 ) );
+		assertThat( result.getResponse().getContentLength(), is( 466 ) );
 	}
 
 	@Test
@@ -243,7 +243,7 @@ public class V2DownloadControllerTest {
 		assertThat( result.getResponse().getHeader( "version" ), is( "0.0u0" ) );
 
 		assertThat( result.getResponse().getContentType(), is( "application/json" ) );
-		assertThat( result.getResponse().getContentLength(), is( 431 ) );
+		assertThat( result.getResponse().getContentLength(), is( 444 ) );
 	}
 
 	@Test

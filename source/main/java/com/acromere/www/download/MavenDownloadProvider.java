@@ -15,11 +15,11 @@ import java.util.concurrent.*;
 @CustomLog
 public class MavenDownloadProvider extends AbstractDownloadProvider {
 
-	private static final String REPO = "https://repo.acromere.com/avn/";
+	private static final String REPO = "https://repo.acromere.com/acm/";
 
 	private static final String GROUP = "com/acromere/";
 
-	private static String ROOT = REPO + GROUP;
+	private static final String ROOT = REPO + GROUP;
 
 	private static final String DEFAULT_EXTENSION = "jar";
 

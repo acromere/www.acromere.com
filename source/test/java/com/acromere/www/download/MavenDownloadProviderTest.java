@@ -23,17 +23,17 @@ public class MavenDownloadProviderTest {
 
 	private static final String TEST_MAVEN_REPOSITORY = "source/test/repos/maven";
 
-	private String group = "com.acromere";
+	private static final String group = "com.acromere";
 
-	private String artifact = "xenon";
+	private static final String artifact = "xenon";
 
-	private String classifier = "product";
+	private static final String classifier = "product";
 
-	private String type = "card";
+	private static final String type = "card";
 
-	private String name = "Xenon";
+	private static final String name = "Xenon";
 
-	private String uri = "https://repo.acromere.com/avn/" + group.replace( '.', '/' ) + "/" + artifact;
+	private static final String uri = "https://repo.acromere.com/acm/" + group.replace( '.', '/' ) + "/" + artifact;
 
 	@BeforeEach
 	public void before() throws Exception {
@@ -61,7 +61,7 @@ public class MavenDownloadProviderTest {
 	}
 
 	@AfterEach
-	public void after() throws Exception {
+	public void after() {
 		//verify( factory, times(2) ).getXmlDescriptor( anyString() );
 	}
 
