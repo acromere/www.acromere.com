@@ -7,6 +7,8 @@ import {fab} from '@fortawesome/free-brands-svg-icons'
 FontAwesomeLibrary.add(fas, far, fab)
 
 export default class Icon {
+  static DOWNLOAD_ROOT = 'https://www.acromere.com/download';
+
   /* URL Definitions */
   static ACROMERE_DARK = new URL('./image/acromere-dark.png', import.meta.url);
   static ACROMERE_LIGHT = new URL('./image/acromere-light.png', import.meta.url);
@@ -20,6 +22,8 @@ export default class Icon {
   static MAZER_LIGHT = new URL('./image/mazer.png', import.meta.url);
   static RECON_LIGHT = new URL('./image/recon.png', import.meta.url);
   static WEAVE_LIGHT = new URL('./image/weave.png', import.meta.url);
+
+  static WEAVE_PRODUCT = new URL( Icon.DOWNLOAD_ROOT + '/latest/weave/product/icon', import.meta.url);
 
   // Needs to be defined before other icons
   static BROKEN = <FontAwesomeIcon className='icon broken' icon={['fas', 'link-slash']}/>;
