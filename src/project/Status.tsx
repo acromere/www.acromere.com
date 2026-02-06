@@ -39,6 +39,7 @@ export default function Status() {
         <h3>Libraries</h3>
         <ProductStatus ident='marea' icon={Icon.CURVE} name='Marea'/>
         <ProductStatus ident='curve' icon={Icon.CURVE} name='Curve'/>
+        <ProductStatus ident='xenos' icon={Icon.XENOS} name='Xenos'/>
         <ProductStatus ident='zenna' icon={Icon.ZENNA} name='Zenna'/>
         <ProductStatus ident='zerra' icon={Icon.ZERRA} name='Zerra'/>
         <ProductStatus ident='zevra' icon={Icon.ZEVRA} name='Zevra'/>

@@ -88,6 +88,7 @@ export default class Icon {
       <img src="." className='icon' alt="ACM"/>
     </picture>
   )
+  static XENOS = Icon.ACROMERE;
   static ZARRA = Icon.ACROMERE;
   static ZENNA = Icon.ACROMERE;
   static ZERRA = Icon.ACROMERE;
