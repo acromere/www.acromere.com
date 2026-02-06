@@ -34,6 +34,7 @@ export default function Status() {
         <ProductStatus ident='carta' icon={Icon.CARTA} name='Cartesia'/>
         <ProductStatus ident='mazer' icon={Icon.MAZER} name='Mazer'/>
         <ProductStatus ident='recon' icon={Icon.RECON} name='Recon'/>
+        <ProductStatus ident='sysup' icon={Icon.SYSUP} name='Sysup'/>
       </div>
       <div className='column product-status'>
         <h3>Libraries</h3>
@@ -48,6 +49,8 @@ export default function Status() {
         <h3>Maven Plugins</h3>
         <ProductStatus ident='cameo' icon={Icon.CAMEO} name='Cameo'/>
         <ProductStatus ident='curex' icon={Icon.CUREX} name='Curex'/>
+        <h3>Other</h3>
+        <ProductStatus ident='tile-rename' icon={Icon.ACROMERE} name='Tile Rename'/>
       </div>
     </div>
   )

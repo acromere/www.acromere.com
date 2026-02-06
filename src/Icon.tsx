@@ -75,6 +75,7 @@ export default class Icon {
     </picture>
   )
   static SEENC = Icon.ACROMERE;
+  static SYSUP = Icon.ACROMERE;
   static WEAVE = (
     <picture>
       <source srcSet={Icon.WEAVE_LIGHT.toString()} media="(prefers-color-scheme: dark)"/>
