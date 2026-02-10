@@ -24,6 +24,8 @@ export default class Icon {
   // static WEAVE_LIGHT = new URL('./image/weave.png', import.meta.url);
   // static WEAVE_LIGHT = new URL('./image/weave.png', import.meta.url);
 
+  static SEENC_LIGHT = new URL( Icon.DOWNLOAD_ROOT + '/latest/seenc/product/icon?theme=light', import.meta.url);
+  static SEENC_DARK = new URL( Icon.DOWNLOAD_ROOT + '/latest/seenc/product/icon?theme=dark', import.meta.url);
   static WEAVE_LIGHT = new URL( Icon.DOWNLOAD_ROOT + '/latest/weave/product/icon?theme=light', import.meta.url);
   static WEAVE_DARK = new URL( Icon.DOWNLOAD_ROOT + '/latest/weave/product/icon?theme=dark', import.meta.url);
 
@@ -76,7 +78,13 @@ export default class Icon {
       <img src="." className='icon' alt="ACM"/>
     </picture>
   )
-  static SEENC = Icon.ACROMERE;
+  static SEENC = (
+    <picture>
+      <source srcSet={Icon.SEENC_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
+      <source srcSet={Icon.SEENC_DARK.toString()} media="(prefers-color-scheme: dark)"/>
+      <img src="." className='icon' alt="ACM"/>
+    </picture>
+  )
   static SYSUP = Icon.ACROMERE;
   static WEAVE = (
     <picture>
