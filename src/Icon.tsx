@@ -77,6 +77,7 @@ export default class Icon {
     </picture>
   )
   static SEENC = Icon.ACROMERE;
+  static SYSUP = Icon.ACROMERE;
   static WEAVE = (
     <picture>
       <source srcSet={Icon.WEAVE_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
@@ -91,6 +92,7 @@ export default class Icon {
       <img src="." className='icon' alt="ACM"/>
     </picture>
   )
+  static XENOS = Icon.ACROMERE;
   static ZARRA = Icon.ACROMERE;
   static ZENNA = Icon.ACROMERE;
   static ZERRA = Icon.ACROMERE;
