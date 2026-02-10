@@ -3,12 +3,12 @@ import {ReactElement} from "react";
 
 function ProductStatus(props: { ident: string; icon: ReactElement<any, any>; name: string; }) {
   return (
-    <div className='product-bar'>
+    <div className='project-bar'>
       <a href={"https://github.com/acromere/" + props.ident}>
         <span className='product-icon'>{props.icon}</span>
       </a>
       <div className='body'>
-        <h6>{props.name}</h6>
+        {/*<h6>{props.name}</h6>*/}
         <a href={'https://github.com/acromere/' + props.ident + '/actions/workflows/ci.yml'}>
           <img alt={props.name + " Build Status"} src={"https://github.com/acromere/" + props.ident + "/actions/workflows/ci.yml/badge.svg"}/>
         </a>

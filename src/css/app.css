@@ -367,6 +367,11 @@ h1 .icon, h2 .icon, h3 .icon, h4 .icon, h5 .icon, h6 .icon {
 	font-size: 3em;
 }
 
+.announcement-title .icon {
+	width: 4rem;
+	height: 4rem;
+}
+
 .announcement-body {
 	margin: 0 0 0 0.5rem;
 }

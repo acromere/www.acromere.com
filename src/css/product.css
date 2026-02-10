@@ -63,7 +63,7 @@
 .product-bar {
 	width: 100%;
 	text-align: justify;
-	margin: 1rem 0;
+	margin: 0.2rem 0;
 
 	display: flex;
 	flex-flow: row nowrap;
@@ -118,3 +118,36 @@
 	justify-content: flex-start;
 	align-items: stretch;
 }
+
+.project-bar {
+	width: 100%;
+	text-align: justify;
+	margin: 0.2rem 0;
+
+	display: flex;
+	flex-flow: row nowrap;
+	/* along the main axis */
+	justify-content: left;
+	/* along the cross axis */
+	align-items: stretch;
+}
+
+.project-bar .body {
+	padding: 0 0 0 1rem;
+	display: flex;
+	flex-flow: column nowrap;
+	/* along the main axis */
+	justify-content: center;
+	/* along the cross axis */
+	align-items: flex-start;
+}
+
+.project-bar-bar .body div {
+	padding: 0.5rem 0 0.5rem 0;
+}
+
+.project-bar .product-icon .icon {
+	width: 2rem;
+	height: 2rem;
+}
+

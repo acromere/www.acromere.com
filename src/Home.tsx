@@ -14,7 +14,7 @@ export default function Home() {
         <div className='announcement-row'>
 
           <div className='announcement-cell'>
-            <a href='/product/xenon'><span className='announcement-title'>{Icon.XENON}</span></a>
+            <span className='announcement-title'><a href='/product/xenon'>{Icon.XENON}</a></span>
           </div>
 
           <div className='announcement-cell'>
@@ -34,13 +34,13 @@ export default function Home() {
           </div>
 
           <div className='announcement-cell'>
-            <a href='/product/xenon'><span className='screenshot-home'>{Image.XENON_WELCOME}</span></a>
+            <span className='screenshot-home'><a href='/product/xenon'>{Image.XENON_WELCOME}</a></span>
           </div>
         </div>
 
         <div className='announcement-row'>
           <div className='announcement-cell'>
-            <a href='/product/cartesia'><span className='announcement-title'>{Icon.CARTA}</span></a>
+            <span className='announcement-title'><a href='/product/cartesia'>{Icon.CARTA}</a></span>
           </div>
           <div className='announcement-cell'>
             <div className='announcement-title'>
@@ -60,7 +60,7 @@ export default function Home() {
           </div>
 
           <div className='announcement-cell'>
-            <a href='/product/cartesia'><span className='screenshot-home'>{Image.CARTESIA_JET}</span></a>
+            <span className='screenshot-home'><a href='/product/cartesia'>{Image.CARTESIA_JET}</a></span>
           </div>
         </div>
 
