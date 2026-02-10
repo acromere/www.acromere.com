@@ -111,7 +111,7 @@ public class V2LocalDownloadProvider implements V2DownloadProvider {
 			return true;
 		} else {
 			try( Stream<Path> children = Files.list( path ) ) {
-				for( Path child : children.filter( Files::isDirectory ).collect( Collectors.toList() ) ) {
+				for( Path child : children.filter( Files::isDirectory ).toList() ) {
 					if( hasProductCard( child ) ) return true;
 				}
 			} catch( IOException exception ) {

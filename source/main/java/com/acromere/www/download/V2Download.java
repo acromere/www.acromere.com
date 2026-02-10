@@ -181,22 +181,22 @@ public class V2Download {
 	static String resolveFormat( String format ) {
 		if( format == null ) return null;
 
-        return switch (format) {
-            case "pack" -> "jar";
-            case "icon" -> "png";
-            default -> format;
-        };
-    }
+		return switch( format ) {
+			case "pack" -> "jar";
+			case "icon" -> "png";
+			default -> format;
+		};
+	}
 
 	static String resolveContentType( String format ) {
 		if( format == null ) return null;
 
-        return switch (format) {
-            case "card" -> "application/json";
-            case "pack" -> "application/java-archive";
-            default -> "application/octet-stream";
-        };
-    }
+		return switch( format ) {
+			case "card" -> "application/json";
+			case "pack" -> "application/java-archive";
+			default -> "application/octet-stream";
+		};
+	}
 
 	static String removeSpecial( String string ) {
 		if( string == null ) return null;
