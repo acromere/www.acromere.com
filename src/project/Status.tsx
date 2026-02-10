@@ -50,7 +50,8 @@ export default function Status() {
         <ProductStatus ident='cameo' icon={Icon.CAMEO} name='Cameo'/>
         <ProductStatus ident='curex' icon={Icon.CUREX} name='Curex'/>
         <h3>Other</h3>
-        <ProductStatus ident='tile-rename' icon={Icon.ACROMERE} name='Tile Rename'/>
+        <ProductStatus ident='roave' icon={Icon.ACROMERE} name='Roave'/>
+        <ProductStatus ident='tiler' icon={Icon.ACROMERE} name='Tiler'/>
       </div>
     </div>
   )
