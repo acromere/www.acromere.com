@@ -21,9 +21,11 @@ export default class Icon {
   static CARTA_LIGHT = new URL('./image/carta.png', import.meta.url);
   static MAZER_LIGHT = new URL('./image/mazer.png', import.meta.url);
   static RECON_LIGHT = new URL('./image/recon.png', import.meta.url);
-  static WEAVE_LIGHT = new URL('./image/weave.png', import.meta.url);
+  // static WEAVE_LIGHT = new URL('./image/weave.png', import.meta.url);
+  // static WEAVE_LIGHT = new URL('./image/weave.png', import.meta.url);
 
-  static WEAVE_PRODUCT = new URL( Icon.DOWNLOAD_ROOT + '/latest/weave/product/icon', import.meta.url);
+  static WEAVE_LIGHT = new URL( Icon.DOWNLOAD_ROOT + '/latest/weave/product/icon?theme=light', import.meta.url);
+  static WEAVE_DARK = new URL( Icon.DOWNLOAD_ROOT + '/latest/weave/product/icon?theme=dark', import.meta.url);
 
   // Needs to be defined before other icons
   static BROKEN = <FontAwesomeIcon className='icon broken' icon={['fas', 'link-slash']}/>;
@@ -77,7 +79,8 @@ export default class Icon {
   static SEENC = Icon.ACROMERE;
   static WEAVE = (
     <picture>
-      <source srcSet={Icon.WEAVE_LIGHT.toString()} media="(prefers-color-scheme: dark)"/>
+      <source srcSet={Icon.WEAVE_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
+      <source srcSet={Icon.WEAVE_DARK.toString()} media="(prefers-color-scheme: dark)"/>
       <img src="." className='icon' alt="ACM"/>
     </picture>
   )
