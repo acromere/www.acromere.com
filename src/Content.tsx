@@ -8,6 +8,8 @@ import Mit from './license/Mit';
 import NotFound from './NotFound';
 import Status from './project/Status';
 import Products from './product/Products';
+import CartesiaProduct from './product/cartesia/Product';
+import Screenshot from './Screenshot';
 
 export function Content() {
   return (
@@ -20,8 +22,9 @@ export function Content() {
             {/*<Route exact path='/product/seenc' element={<SeencProduct/>}/>*/}
             {/*<Route exact path='/product/weave' element={<WeaveProduct/>}/>*/}
 
-            {/*<Route exact path='/product/cartesia' element={<CartesiaProduct/>}/>*/}
-            {/*<Route exact path='/product/cartesia/docs/user-guide'  element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
+            <Route path='carta' element={<CartesiaProduct/>}/>
+            <Route path='cartesia' element={<CartesiaProduct/>}/>
+            {/*<Route exact path='/product/cartesia/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
 
             {/*<Route exact path='/product/xenon/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/manual/content.html' outline={3}/>}/>*/}
             {/*<Route exact path='/product/xenon/docs/module-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/modules/content.html' outline={3}/>}/>*/}
@@ -32,7 +35,7 @@ export function Content() {
             {/*<Route exact path='/product/xenon/mods' element={<XenonMods/>}/>*/}
             {/*<Route exact path='/product/xenon/modules' element={<XenonMods/>}/>*/}
             {/*<Route exact path='/product/xenon' element={<XenonProduct/>}/>*/}
-            {/*<Route exact path='/product/screenshot' element={<Screenshot/>}/>*/}
+            <Route path='screenshot' element={<Screenshot/>}/>
 
             {/* API documentation routes */}
             {/*<Route path='/product/acorn/docs/api' onEnter={reload}/>*/}
