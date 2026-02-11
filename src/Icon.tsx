@@ -3,13 +3,12 @@ import {library as FontAwesomeLibrary} from '@fortawesome/fontawesome-svg-core'
 import {fas} from '@fortawesome/free-solid-svg-icons'
 import {far} from '@fortawesome/free-regular-svg-icons'
 import {fab} from '@fortawesome/free-brands-svg-icons'
+import Config from './Config';
 
 FontAwesomeLibrary.add(fas, far, fab)
 
 export default class Icon {
-  static DOWNLOAD_ROOT = 'https://www.acromere.com/download';
-
-  /* URL Definitions */
+  // URL Definitions
   static ACROMERE_DARK = new URL('./image/acromere-dark.png', import.meta.url);
   static ACROMERE_LIGHT = new URL('./image/acromere-light.png', import.meta.url);
   static XENON_DARK = new URL('./image/xenon-dark.png', import.meta.url);
@@ -21,13 +20,11 @@ export default class Icon {
   static CARTA_LIGHT = new URL('./image/carta.png', import.meta.url);
   static MAZER_LIGHT = new URL('./image/mazer.png', import.meta.url);
   static RECON_LIGHT = new URL('./image/recon.png', import.meta.url);
-  // static WEAVE_LIGHT = new URL('./image/weave.png', import.meta.url);
-  // static WEAVE_LIGHT = new URL('./image/weave.png', import.meta.url);
 
-  static SEENC_LIGHT = new URL( Icon.DOWNLOAD_ROOT + '/latest/seenc/product/icon?theme=light', import.meta.url);
-  static SEENC_DARK = new URL( Icon.DOWNLOAD_ROOT + '/latest/seenc/product/icon?theme=dark', import.meta.url);
-  static WEAVE_LIGHT = new URL( Icon.DOWNLOAD_ROOT + '/latest/weave/product/icon?theme=light', import.meta.url);
-  static WEAVE_DARK = new URL( Icon.DOWNLOAD_ROOT + '/latest/weave/product/icon?theme=dark', import.meta.url);
+  static SEENC_LIGHT = new URL( Config.ICON_ROOT + '/latest/seenc/product/icon?theme=light', import.meta.url);
+  static SEENC_DARK = new URL( Config.ICON_ROOT + '/latest/seenc/product/icon?theme=dark', import.meta.url);
+  static WEAVE_LIGHT = new URL( Config.ICON_ROOT + '/latest/weave/product/icon?theme=light', import.meta.url);
+  static WEAVE_DARK = new URL( Config.ICON_ROOT + '/latest/weave/product/icon?theme=dark', import.meta.url);
 
   // Needs to be defined before other icons
   static BROKEN = <FontAwesomeIcon className='icon broken' icon={['fas', 'link-slash']}/>;
