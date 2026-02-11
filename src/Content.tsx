@@ -7,13 +7,47 @@ import Legal from './Legal';
 import Mit from './license/Mit';
 import NotFound from './NotFound';
 import Status from './project/Status';
+import Products from './product/Products';
 
 export function Content() {
   return (
     <div className='router'>
       <Router>
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          {/* Supported routes */}
+          <Route path='/product'>
+            {/*<Route exact path='/product/acorn' element={<AcornProduct/>}/>*/}
+            {/*<Route exact path='/product/seenc' element={<SeencProduct/>}/>*/}
+            {/*<Route exact path='/product/weave' element={<WeaveProduct/>}/>*/}
+
+            {/*<Route exact path='/product/cartesia' element={<CartesiaProduct/>}/>*/}
+            {/*<Route exact path='/product/cartesia/docs/user-guide'  element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
+
+            {/*<Route exact path='/product/xenon/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/manual/content.html' outline={3}/>}/>*/}
+            {/*<Route exact path='/product/xenon/docs/module-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/modules/content.html' outline={3}/>}/>*/}
+            {/*<Route exact path='/product/xenon/docs/tool-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/tools/content.html' outline={3}/>}/>*/}
+            {/*<Route exact path='/product/xenon/contribute' render={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/contribute/content.html' outline={3}/>}/>*/}
+            {/*<Route exact path='/product/xenon/docs/screenshots' element={<XenonScreenshots/>}/>*/}
+            {/*<Route exact path='/product/xenon/docs' element={<XenonDocs/>}/>*/}
+            {/*<Route exact path='/product/xenon/mods' element={<XenonMods/>}/>*/}
+            {/*<Route exact path='/product/xenon/modules' element={<XenonMods/>}/>*/}
+            {/*<Route exact path='/product/xenon' element={<XenonProduct/>}/>*/}
+            {/*<Route exact path='/product/screenshot' element={<Screenshot/>}/>*/}
+
+            {/* API documentation routes */}
+            {/*<Route path='/product/acorn/docs/api' onEnter={reload}/>*/}
+            {/*<Route path='/product/seenc/docs/api' onEnter={reload}/>*/}
+            {/*<Route path='/product/xenon/docs/api' onEnter={reload}/>*/}
+            {/*<Route path='/product/zenna/docs/api' onEnter={reload}/>*/}
+            {/*<Route path='/product/zevra/docs/api' onEnter={reload}/>*/}
+          </Route>
+
+          <Route path='/products' element={<Products/>}/>
+
+          <Route path='/project'>
+            <Route path='status' element={<Status/>}/>
+          </Route>
+
           <Route path='/about' element={<About/>}/>
           <Route path='/legal' element={<Legal/>}/>
           <Route path='/license'>
@@ -21,9 +55,9 @@ export function Content() {
           </Route>
 
           <Route path='projects' element={<Status/>}/>
-          <Route path='/project'>
-            <Route path='status' element={<Status/>}/>
-          </Route>
+
+          {/* Home route */}
+          <Route path='/' element={<Home/>}/>
 
           {/* Default route */}
           <Route path='*' element={<NotFound/>}/>
