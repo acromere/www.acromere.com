@@ -8,7 +8,8 @@ import Mit from './license/Mit';
 import NotFound from './NotFound';
 import Status from './project/Status';
 import Products from './product/Products';
-import CartesiaProduct from './product/cartesia/Product';
+import AcornProduct from './product/acorn/Product';
+import CartaProduct from './product/carta/Product';
 import Screenshot from './Screenshot';
 
 export function Content() {
@@ -22,8 +23,9 @@ export function Content() {
             {/*<Route exact path='/product/seenc' element={<SeencProduct/>}/>*/}
             {/*<Route exact path='/product/weave' element={<WeaveProduct/>}/>*/}
 
-            <Route path='carta' element={<CartesiaProduct/>}/>
-            <Route path='cartesia' element={<CartesiaProduct/>}/>
+            <Route path='acorn' element={<AcornProduct/>}/>
+            <Route path='carta' element={<CartaProduct/>}/>
+            <Route path='cartesia' element={<CartaProduct/>}/>
             {/*<Route exact path='/product/cartesia/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
 
             {/*<Route exact path='/product/xenon/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/manual/content.html' outline={3}/>}/>*/}

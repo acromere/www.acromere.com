@@ -12,8 +12,8 @@ export default class ProductPage {
             .catch(failure)
     }
 
-    static createDownloadTile(type:string, category:string, product:string, store:any, platform:Platform, pack:String = 'install') {
-        const card = store[category][platform.KEY];
+    static createDownloadTile(type:string, category:string, product:string, cards:any, platform:Platform, pack:String = 'install') {
+        const card = cards[category][platform.KEY];
 
         const artifact = card.artifact;
         const version = card.version;
