@@ -8,6 +8,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Config from '../../Config';
 import ProductPage from '../ProductPage';
 import Platform from '../../Platform';
+import DownloadTile from "../DownloadTile.tsx";
 
 library.add(fas, fab);
 
@@ -64,7 +65,7 @@ export default function AcornProduct(this: any) {
         </div>
 
         <div className='download-row'>
-          {ProductPage.createDownloadTile('primary', 'stable', 'Acorn', cards, Platform.ANY, 'product')}
+          <DownloadTile type='primary' category='stable' product='Acorn' cards={cards} platform={Platform.ANY} pack='product'/>
         </div>
 
         <div className='resource-row'>
@@ -77,7 +78,7 @@ export default function AcornProduct(this: any) {
         </div>
 
         <div className='download-row'>
-          {ProductPage.createDownloadTile('primary', 'latest', 'Acorn', cards, Platform.ANY, 'product')}
+          <DownloadTile type='primary' category='latest' product='Acorn' cards={cards} platform={Platform.ANY} pack='product'/>
         </div>
       </div>
 
