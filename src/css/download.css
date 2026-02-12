@@ -1,0 +1,96 @@
+.download-row {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.download {
+	margin: 0.5rem;
+	color: light-dark(var(--text-light), var(--text-dark));
+	border-radius: 0.5rem;
+
+	flex: 1 1 100%;
+
+	display: flex;
+	flex-flow: row nowrap;
+	/* main axis */
+	justify-content: center;
+	/* cross axis */
+	align-items: center;
+}
+
+.download-layout {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.download-icon {
+	margin: 0 0.2rem 0 0;
+}
+
+.download-metadata {
+	align-self: center;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.download.primary {
+	flex-grow: 1.5;
+	margin: 1rem 0.5rem;
+	padding: 1rem;
+}
+
+.download.primary .title {
+	font-size: 2rem;
+	margin: 0.5rem;
+}
+
+.download.secondary {
+	flex-grow: 1;
+	margin: 0.5rem 0.5rem;
+	padding: 0.5rem;
+}
+
+.download.secondary .title {
+	font-size: 1rem;
+	margin: 0.5rem;
+}
+
+.download.stable.primary {
+	background-color: var(--primary-stable-color);
+}
+
+.download.stable.primary:hover {
+  color: light-dark(var(--text-light), var(--text-dark));
+	background-color: var(--primary-stable-tint);
+}
+
+/*.download.stable.secondary {*/
+/*	background-color: var(--secondary-stable-color);*/
+/*}*/
+
+/*.download.stable.secondary:hover {*/
+/*	color: var(--secondary-white);*/
+/*	background-color: var(--secondary-stable-tint);*/
+/*}*/
+
+.download.latest {
+	background-color: var(--primary-latest-color);
+}
+
+.download.latest:hover {
+	color: light-dark(var(--text-light), var(--text-dark));
+	background-color: var(--primary-latest-tint);
+}
+
+.download.disabled {
+	cursor: not-allowed;
+	background-color: var(--primary-disabled-color);
+}
+
