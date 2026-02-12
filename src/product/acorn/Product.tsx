@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import Icon from '../../Icon';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {fas} from '@fortawesome/free-solid-svg-icons'
@@ -13,15 +13,15 @@ library.add(fas, fab);
 
 export default function AcornProduct(this: any) {
 
-  const [ cards, setcards ] = useState({
+  const [cards, setcards] = useState({
     stable: {
-      any: {},
+      card: {},
       linux: {},
       macosx: {},
       windows: {}
     },
     latest: {
-      any: {},
+      card: {},
       linux: {},
       macosx: {},
       windows: {}
@@ -29,20 +29,23 @@ export default function AcornProduct(this: any) {
   })
 
   useEffect(() => {
-    ProductPage.productCards('acorn-cli', (cards:any) => {
-      console.log(cards);
-      this.setStore(cards);
-    },()=>{});
+    ProductPage.productCards(
+      'acorn-cli',
+      (cards: any) => {
+        console.log(cards);
+        this.setStore(cards);
+      },
+      () => {
+      });
   })
 
-  console.log( Platform.ANY)
-  let stableDownload = <div className='download-row'>
-    {ProductPage.createDownloadTile('primary', 'stable', 'Acorn', cards, Platform.ANY, 'product')}
-  </div>;
-
-  let latestDownload = <div className='download-row'>
-    {ProductPage.createDownloadTile('primary', 'latest', 'Acorn', cards, Platform.ANY, 'product')}
-  </div>;
+  // let stableDownload = <div className='download-row'>
+  //   {ProductPage.createDownloadTile('primary', 'stable', 'Acorn', cards, Platform.ANY, 'product')}
+  // </div>;
+  //
+  // let latestDownload = <div className='download-row'>
+  //   {ProductPage.createDownloadTile('primary', 'latest', 'Acorn', cards, Platform.ANY, 'product')}
+  // </div>;
 
   return (
     <div className='content'>
@@ -60,7 +63,9 @@ export default function AcornProduct(this: any) {
           with others.
         </div>
 
-        {stableDownload}
+        <div className='download-row'>
+          {ProductPage.createDownloadTile('primary', 'stable', 'Acorn', cards, Platform.ANY, 'product')}
+        </div>
 
         <div className='resource-row'>
           <div className='resource-tile'>
@@ -71,7 +76,9 @@ export default function AcornProduct(this: any) {
           </div>
         </div>
 
-        {latestDownload}
+        <div className='download-row'>
+          {ProductPage.createDownloadTile('primary', 'latest', 'Acorn', cards, Platform.ANY, 'product')}
+        </div>
       </div>
 
     </div>

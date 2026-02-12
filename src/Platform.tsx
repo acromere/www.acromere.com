@@ -1,7 +1,7 @@
 export default class Platform {
 
   static ANY: Platform = {
-    KEY: 'any',
+    KEY: 'card',
     NAME: 'Any Platform',
     ICON: 'jar',
     INSTALLER_EXT: 'jar',
