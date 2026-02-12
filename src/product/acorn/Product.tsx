@@ -1,52 +1,32 @@
-import React, {useEffect, useState} from 'react';
+import React, {ReactElement, RefObject, useEffect, useRef, useState} from 'react';
 import Icon from '../../Icon';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {fas} from '@fortawesome/free-solid-svg-icons'
 import {fab} from '@fortawesome/free-brands-svg-icons'
 import '../../css/product.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import Config from '../../Config';
-import ProductPage from '../ProductPage';
-import Platform from '../../Platform';
+import Config from "../../Config.tsx";
+import Platform from "../../Platform.tsx";
 import DownloadTile from "../DownloadTile.tsx";
+import AcromereApi from "../../client/AcromereApi.tsx";
 
 library.add(fas, fab);
 
-export default function AcornProduct(this: any) {
+export default function AcornProduct(this: any):ReactElement<any,any> {
 
-  const [cards, setcards] = useState({
-    stable: {
-      card: {},
-      linux: {},
-      macosx: {},
-      windows: {}
-    },
-    latest: {
-      card: {},
-      linux: {},
-      macosx: {},
-      windows: {}
-    }
-  })
+  const [cards, setCards] = useState({})
 
-  useEffect(() => {
-    ProductPage.productCards(
+  const documentLink:RefObject<string> = useRef<string>( Config.ROOT_URL + '/product/acorn/docs/api/index.html' );
+
+  useEffect(():void => {
+    AcromereApi.productCards(
       'acorn-cli',
-      (cards: any) => {
-        console.log(cards);
-        this.setStore(cards);
+      (cards: any): void => {
+        setCards(cards);
       },
-      () => {
+      (): void => {
       });
-  })
-
-  // let stableDownload = <div className='download-row'>
-  //   {ProductPage.createDownloadTile('primary', 'stable', 'Acorn', cards, Platform.ANY, 'product')}
-  // </div>;
-  //
-  // let latestDownload = <div className='download-row'>
-  //   {ProductPage.createDownloadTile('primary', 'latest', 'Acorn', cards, Platform.ANY, 'product')}
-  // </div>;
+  }, []) // Empty array ensures it runs only on mount
 
   return (
     <div className='content'>
@@ -65,12 +45,12 @@ export default function AcornProduct(this: any) {
         </div>
 
         <div className='download-row'>
-          <DownloadTile type='primary' category='stable' product='Acorn' cards={cards} platform={Platform.ANY} pack='product'/>
+          <DownloadTile type='primary' category='stable' product='Acorn' cards={cards} setCards={setCards} platform={Platform.ANY} pack='product'/>
         </div>
 
         <div className='resource-row'>
           <div className='resource-tile'>
-            <div><a href={Config.ROOT_URL + '/product/acorn/docs/api/index.html'}><FontAwesomeIcon icon={['fas', 'tools']}/> Acorn API</a></div>
+            <div><a href={documentLink.current}><FontAwesomeIcon icon={['fas', 'tools']}/> Acorn API</a></div>
           </div>
           <div className='resource-tile'>
             <div><a href='https://github.com/avereon/acorn' target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github']}/> Source Code</a></div>

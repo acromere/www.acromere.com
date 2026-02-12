@@ -12,6 +12,7 @@ export default class ProductPage {
             .catch(failure)
     }
 
+    // DEPRECATED
     static createDownloadTile(type:string, category:string, product:string, cards:any, platform:Platform, pack:string = 'install') {
         const card = cards[category][platform.KEY];
 

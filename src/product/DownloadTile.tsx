@@ -1,29 +1,29 @@
-import {useState} from 'react';
 import Config from "../Config.tsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-export default function DownloadTile({type, category, product, cards, platform, pack}) {
+export default function DownloadTile(props: any) {
 
-    const [version, setVersion] = useState<string>("v"+cards.version);
+  const category = props.cards[props.category];
+  const card = category && props.cards[props.category][props.platform.KEY];
+  const artifact = card && card.artifact;
+  const version = card && card.version;
 
-    const card = cards[category][platform.KEY];
-    const artifact = card.artifact;
-    // const version = card.version;
-    const ext = platform.INSTALLER_EXT;
+  const ext = props.platform.INSTALLER_EXT;
 
-    let style = 'download ' + type;
-    const platformSize = type === 'primary' ? '3x' : '2x';
-    const platformIcon:any = type === 'primary' ? 'download' : ['fab', platform.ICON];
+  const style = 'download ' + props.type;
+  const downloadUrl = Config.DOWNLOAD_URL + '/' + props.category + '/' + artifact + '/' + props.platform.KEY + '/' + props.pack + '/' + ext;
+  const platformSize = props.type === 'primary' ? '3x' : '2x';
+  const platformIcon: any = props.type === 'primary' ? 'download' : ['fab', props.platform.ICON];
 
-    return (
-        <a className={style + " " + category} href={Config.DOWNLOAD_URL + '/' + category + '/' + artifact + '/' + platform.KEY + '/' + pack + '/' + ext}>
-            <div className='download-layout'>
-                <FontAwesomeIcon className='download-icon' icon={platformIcon} size={platformSize}/>
-                <div className='download-metadata'>
-                    <div className='title'>{product} for {platform.NAME}</div>
-                    <div>v{cards[category][platform.KEY].version}</div>
-                </div>
-            </div>
-        </a>
-    )
+  return (
+    <a className={style + " " + props.category} href={downloadUrl}>
+      <div className='download-layout'>
+        <FontAwesomeIcon className='download-icon' icon={platformIcon} size={platformSize}/>
+        <div className='download-metadata'>
+          <div className='title'>{props.product} for {props.platform.NAME}</div>
+          <div>{version}</div>
+        </div>
+      </div>
+    </a>
+  )
 }
