@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navigate,BrowserRouter as Router, Route, Routes} from 'react-router'
+import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router'
 
 import About from './About';
 import Home from './Home';
@@ -12,7 +12,6 @@ import AcornProduct from './product/acorn/Product';
 import CartaProduct from './product/carta/Product';
 import SeencProduct from "./product/seenc/Product.tsx";
 import Screenshot from './Screenshot';
-import ForwardTo from "./ForwardTo.tsx";
 
 export function Content() {
 
@@ -23,6 +22,7 @@ export function Content() {
           {/* Supported routes */}
           <Route path='product'>
             <Route path='acorn' element={<AcornProduct/>}/>
+            <Route path='acorn/docs/api/*' element={<Navigate to={window.location.pathname}/>}/>
             <Route path='carta' element={<CartaProduct/>}/>
             <Route path='cartesia' element={<CartaProduct/>}/>
             <Route path='seenc' element={<SeencProduct/>}/>
