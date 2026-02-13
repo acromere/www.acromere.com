@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router'
+import {Navigate,BrowserRouter as Router, Route, Routes} from 'react-router'
 
 import About from './About';
 import Home from './Home';
@@ -12,6 +12,7 @@ import AcornProduct from './product/acorn/Product';
 import CartaProduct from './product/carta/Product';
 import SeencProduct from "./product/seenc/Product.tsx";
 import Screenshot from './Screenshot';
+import ForwardTo from "./ForwardTo.tsx";
 
 export function Content() {
 
@@ -22,7 +23,11 @@ export function Content() {
           {/* Supported routes */}
           <Route path='product'>
             <Route path='acorn' element={<AcornProduct/>}>
-              <Route path='docs/api/*'/>
+              <Route path='docs'>
+                <Route path='api'>
+                  <Route path='*' element={<ForwardTo path='https://www.acromere.com/product/acorn/docs/api/index.html'/>}/>
+                </Route>
+              </Route>
             </Route>
             <Route path='carta' element={<CartaProduct/>}/>
             <Route path='cartesia' element={<CartaProduct/>}/>
