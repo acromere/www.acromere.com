@@ -12,30 +12,23 @@ import AcornProduct from './product/acorn/Product';
 import CartaProduct from './product/carta/Product';
 import SeencProduct from "./product/seenc/Product.tsx";
 import Screenshot from './Screenshot';
-import ForwardTo from "./ForwardTo.tsx";
-import Config from "./Config.tsx";
-
-const reload = () => window.location.reload();
 
 export function Content() {
+
   return (
     <div className='router'>
       <Router>
         <Routes>
           {/* Supported routes */}
-          <Route path='/product'>
-            {/*<Route exact path='/product/acorn' element={<AcornProduct/>}/>*/}
-            {/*<Route exact path='/product/seenc' element={<SeencProduct/>}/>*/}
-            {/*<Route exact path='/product/weave' element={<WeaveProduct/>}/>*/}
-
+          <Route path='product'>
             <Route path='acorn' element={<AcornProduct/>}>
-              <Route path='docs'>
-                <Route path='api' element={<ForwardTo path={Config.ROOT_URL + '/product/acorn/docs/api'}/>}/>
-              </Route>
+              <Route path='docs/api/*'/>
             </Route>
             <Route path='carta' element={<CartaProduct/>}/>
             <Route path='cartesia' element={<CartaProduct/>}/>
             <Route path='seenc' element={<SeencProduct/>}/>
+            {/*<Route exact path='/product/weave' element={<WeaveProduct/>}/>*/}
+
             {/*<Route exact path='/product/cartesia/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
 
             {/*<Route exact path='/product/xenon/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/manual/content.html' outline={3}/>}/>*/}
