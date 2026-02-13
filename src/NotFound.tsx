@@ -9,6 +9,7 @@ export default function NotFound() {
   if (pathname.startsWith('/product/acorn/docs/api')) {
     //window.location.assign(Config.ROOT_URL + pathname);
     navigate(Config.ROOT_URL + pathname);
+    return;
   }
 
   return (
