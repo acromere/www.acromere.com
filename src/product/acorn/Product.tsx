@@ -16,7 +16,7 @@ export default function AcornProduct(this: any):ReactElement<any,any> {
 
   const [cards, setCards] = useState({})
 
-  const documentLink:RefObject<string> = useRef<string>( Config.ROOT_URL + '/product/acorn/docs/api/index.html' );
+  const documentLink:RefObject<string> = useRef<string>( '/product/acorn/docs/api/index.html' );
 
   useEffect(():void => {
     AcromereApi.productCards(

@@ -22,13 +22,7 @@ export function Content() {
         <Routes>
           {/* Supported routes */}
           <Route path='product'>
-            <Route path='acorn' element={<AcornProduct/>}>
-              <Route path='docs'>
-                <Route path='api'>
-                  <Route path='*' element={<ForwardTo path='https://www.acromere.com/product/acorn/docs/api/index.html'/>}/>
-                </Route>
-              </Route>
-            </Route>
+            <Route path='acorn' element={<AcornProduct/>}/>
             <Route path='carta' element={<CartaProduct/>}/>
             <Route path='cartesia' element={<CartaProduct/>}/>
             <Route path='seenc' element={<SeencProduct/>}/>
