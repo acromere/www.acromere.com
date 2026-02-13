@@ -16,7 +16,7 @@ export default function DownloadTile(props: any) {
   if (disabled) {
     return (
       <div className={style}>
-        <DownloadTileCore disabled={true} type={props.type} category={props.category} product={props.product} cards={props.cards} platform={props.platform} pack={props.pack}/>
+        <DownloadTileCore type={props.type} category={props.category} product={props.product} cards={props.cards} platform={props.platform} pack={props.pack}/>
       </div>
     )
   } else {
@@ -36,7 +36,7 @@ function DownloadTileCore(props: any) {
   const platformSize = props.type === 'primary' ? '3x' : '2x'
   const platformIcon: any = props.type === 'primary' ? 'download' : ['fab', props.platform.ICON]
 
-  const tileVersion: string = props.disabled ? 'unavailable' : version
+  const tileVersion = (version === undefined) ? 'unavailable' : version
 
   return (
     <div className='download-layout'>
