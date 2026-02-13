@@ -10,6 +10,7 @@ import Status from './project/Status';
 import Products from './product/Products';
 import AcornProduct from './product/acorn/Product';
 import CartaProduct from './product/carta/Product';
+import SeencProduct from "./product/seenc/Product.tsx";
 import Screenshot from './Screenshot';
 
 export function Content() {
@@ -26,6 +27,7 @@ export function Content() {
             <Route path='acorn' element={<AcornProduct/>}/>
             <Route path='carta' element={<CartaProduct/>}/>
             <Route path='cartesia' element={<CartaProduct/>}/>
+            <Route path='seenc' element={<SeencProduct/>}/>
             {/*<Route exact path='/product/cartesia/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
 
             {/*<Route exact path='/product/xenon/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/manual/content.html' outline={3}/>}/>*/}

@@ -8,28 +8,6 @@ import {ScreenshotTile} from "../../Screenshot";
 
 library.add(fas, fab);
 
-// state = {
-//     stable: {
-//         linux: {}, macosx: {}, windows: {}
-//     }, latest: {
-//         linux: {}, macosx: {}, windows: {}
-//     }
-// };
-//
-// componentDidMount() {
-//     ProductPage.productCards('carta', (cards) => {
-//         this.setState(cards);
-//     });
-// }
-
-// let stableDownload = <div className='download-row'>
-//     {ProductPage.createDownloadTile('primary', 'stable', 'Weave', this.state, Platform.CURRENT, 'product')}
-// </div>;
-//
-// let latestDownload = <div className='download-row'>
-//     {ProductPage.createDownloadTile('primary', 'latest', 'Weave', this.state, Platform.CURRENT, 'product')}
-// </div>;
-
 export default function CartesiaProduct() {
 
   return (
