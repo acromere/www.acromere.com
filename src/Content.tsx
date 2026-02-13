@@ -12,6 +12,10 @@ import AcornProduct from './product/acorn/Product';
 import CartaProduct from './product/carta/Product';
 import SeencProduct from "./product/seenc/Product.tsx";
 import Screenshot from './Screenshot';
+import ForwardTo from "./ForwardTo.tsx";
+import Config from "./Config.tsx";
+
+const reload = () => window.location.reload();
 
 export function Content() {
   return (
@@ -24,7 +28,11 @@ export function Content() {
             {/*<Route exact path='/product/seenc' element={<SeencProduct/>}/>*/}
             {/*<Route exact path='/product/weave' element={<WeaveProduct/>}/>*/}
 
-            <Route path='acorn' element={<AcornProduct/>}/>
+            <Route path='acorn' element={<AcornProduct/>}>
+              <Route path='docs'>
+                <Route path='api' element={<ForwardTo path={Config.ROOT_URL + '/product/acorn/docs/api'}/>}/>
+              </Route>
+            </Route>
             <Route path='carta' element={<CartaProduct/>}/>
             <Route path='cartesia' element={<CartaProduct/>}/>
             <Route path='seenc' element={<SeencProduct/>}/>
