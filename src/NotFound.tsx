@@ -1,12 +1,14 @@
 import Icon from './Icon';
-import {useLocation} from "react-router";
+import {useLocation, useNavigate} from "react-router";
 import Config from "./Config.tsx";
 
 export default function NotFound() {
 
   const {pathname} = useLocation();
+  const navigate = useNavigate();
   if (pathname.startsWith('/product/acorn/docs/api')) {
-    window.location.assign(Config.ROOT_URL + pathname);
+    //window.location.assign(Config.ROOT_URL + pathname);
+    navigate(Config.ROOT_URL + pathname);
   }
 
   return (
