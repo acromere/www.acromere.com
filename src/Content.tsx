@@ -22,7 +22,6 @@ export function Content() {
           {/* Supported routes */}
           <Route path='product'>
             <Route path='acorn' element={<AcornProduct/>}/>
-            <Route path='acorn/docs/api/*' element={<Navigate to={window.location.pathname}/>}/>
             <Route path='carta' element={<CartaProduct/>}/>
             <Route path='cartesia' element={<CartaProduct/>}/>
             <Route path='seenc' element={<SeencProduct/>}/>
@@ -42,11 +41,7 @@ export function Content() {
             <Route path='screenshot' element={<Screenshot/>}/>
 
             {/* API documentation routes */}
-            {/*<Route path='/product/acorn/docs/api' onEnter={reload}/>*/}
-            {/*<Route path='/product/seenc/docs/api' onEnter={reload}/>*/}
-            {/*<Route path='/product/xenon/docs/api' onEnter={reload}/>*/}
-            {/*<Route path='/product/zenna/docs/api' onEnter={reload}/>*/}
-            {/*<Route path='/product/zevra/docs/api' onEnter={reload}/>*/}
+            <Route path='*/docs/api/*' element={<Navigate to={window.location.pathname}/>}/>
           </Route>
 
           <Route path='/products' element={<Products/>}/>
