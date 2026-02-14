@@ -1,0 +1,12 @@
+.license {
+	margin: 0.1rem;
+	width: 50rem;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.license p {
+	margin: 0.5rem 0;
+}

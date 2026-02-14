@@ -1,3 +1,4 @@
+import '../css/license.css';
 import CopyrightText from '../CopyrightText';
 
 export default function Mit() {

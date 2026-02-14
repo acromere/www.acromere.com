@@ -11,7 +11,7 @@ import Config from "../../Config";
 
 library.add(fas, fab);
 
-export default class Product extends React.Component {
+export default class WeaveProduct extends React.Component {
 
     state = {
         stable: {

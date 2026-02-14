@@ -1,0 +1,33 @@
+.resource-row {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.resource-tile {
+	font-size: 1.2rem;
+	background: var(--secondary-white);
+	padding: 0.5rem;
+	margin: 1rem 0.5rem;
+	border-radius: 0.5rem;
+
+	flex: 1 1;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.product-status {
+	width: 25rem;
+
+	/* flex child constraints */
+	flex: 100 1 auto;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+}

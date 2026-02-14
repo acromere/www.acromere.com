@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router'
+import {BrowserRouter as Router, Navigate, Route, Routes, useParams} from 'react-router'
 
 import About from './About';
 import Home from './Home';
@@ -12,6 +12,11 @@ import AcornProduct from './product/acorn/Product';
 import CartaProduct from './product/carta/Product';
 import SeencProduct from "./product/seenc/Product.tsx";
 import Screenshot from './Screenshot';
+import XenonProduct from "./product/xenon/Product.tsx";
+import XenonModules from "./product/xenon/Modules.tsx";
+import XenonScreenshots from "./product/xenon/Screenshots.tsx";
+import XenonDocs from "./product/xenon/XenonDocs.tsx";
+import DocViewer from "./DocViewer.tsx";
 
 export function Content() {
 
@@ -25,19 +30,20 @@ export function Content() {
             <Route path='carta' element={<CartaProduct/>}/>
             <Route path='cartesia' element={<CartaProduct/>}/>
             <Route path='seenc' element={<SeencProduct/>}/>
-            {/*<Route exact path='/product/weave' element={<WeaveProduct/>}/>*/}
+            {/*<Route path='weave' element={<WeaveProduct/>}/>*/}
+            <Route path='xenon' element={<XenonProduct/>}/>
 
-            {/*<Route exact path='/product/cartesia/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
+            {/*<Route path='carta/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
+            {/*<Route path='cartesia/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
 
-            {/*<Route exact path='/product/xenon/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/manual/content.html' outline={3}/>}/>*/}
-            {/*<Route exact path='/product/xenon/docs/module-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/modules/content.html' outline={3}/>}/>*/}
-            {/*<Route exact path='/product/xenon/docs/tool-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/tools/content.html' outline={3}/>}/>*/}
-            {/*<Route exact path='/product/xenon/contribute' render={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/contribute/content.html' outline={3}/>}/>*/}
-            {/*<Route exact path='/product/xenon/docs/screenshots' element={<XenonScreenshots/>}/>*/}
-            {/*<Route exact path='/product/xenon/docs' element={<XenonDocs/>}/>*/}
-            {/*<Route exact path='/product/xenon/mods' element={<XenonMods/>}/>*/}
-            {/*<Route exact path='/product/xenon/modules' element={<XenonMods/>}/>*/}
-            {/*<Route exact path='/product/xenon' element={<XenonProduct/>}/>*/}
+            <Route path='xenon/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/manual/content.html' outline={3}/>}/>
+            {/*<Route path='xenon/docs/module-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/modules/content.html' outline={3}/>}/>*/}
+            {/*<Route path='xenon/docs/tool-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/tools/content.html' outline={3}/>}/>*/}
+            {/*<Route path='xenon/contribute' render={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/contribute/content.html' outline={3}/>}/>*/}
+            <Route path='xenon/docs/screenshots' element={<XenonScreenshots/>}/>
+            <Route path='xenon/docs' element={<XenonDocs/>}/>
+            <Route path='xenon/mods' element={<XenonModules/>}/>
+            <Route path='xenon/modules' element={<XenonModules/>}/>
             <Route path='screenshot' element={<Screenshot/>}/>
 
             {/* API documentation routes */}
