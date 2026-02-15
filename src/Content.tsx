@@ -24,6 +24,9 @@ export function Content() {
     <div className='router'>
       <Router>
         <Routes>
+          {/* API documentation routes */}
+          <Route path='*/docs/api/*' element={<Navigate to={window.location.pathname}/>}/>
+
           {/* Supported routes */}
           <Route path='product'>
             <Route path='acorn' element={<AcornProduct/>}/>
@@ -41,13 +44,11 @@ export function Content() {
             {/*<Route path='xenon/docs/tool-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/tools/content.html' outline={3}/>}/>*/}
             {/*<Route path='xenon/contribute' render={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/contribute/content.html' outline={3}/>}/>*/}
             <Route path='xenon/docs/screenshots' element={<XenonScreenshots/>}/>
-            <Route path='xenon/docs' element={<XenonDocs/>}/>
+            {/*<Route path='xenon/docs' element={<XenonDocs/>}/>*/}
             <Route path='xenon/mods' element={<XenonModules/>}/>
             <Route path='xenon/modules' element={<XenonModules/>}/>
             <Route path='screenshot' element={<Screenshot/>}/>
 
-            {/* API documentation routes */}
-            <Route path='*/docs/api/*' element={<Navigate to={window.location.pathname}/>}/>
           </Route>
 
           <Route path='/products' element={<Products/>}/>
