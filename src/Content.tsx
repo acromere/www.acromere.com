@@ -29,13 +29,11 @@ export function Content() {
             <Route path='acorn' element={<AcornProduct/>}/>
             <Route path='carta' element={<CartaProduct/>}/>
             <Route path='cartesia' element={<CartaProduct/>}/>
+            <Route path='carta/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>
+            <Route path='cartesia/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>
             <Route path='seenc' element={<SeencProduct/>}/>
             {/*<Route path='weave' element={<WeaveProduct/>}/>*/}
             <Route path='xenon' element={<XenonProduct/>}/>
-
-            {/*<Route path='carta/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
-            {/*<Route path='cartesia/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
-
             <Route path='xenon/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/xenon/master/source/main/docs/manual/content.html' outline={3}/>}/>
             <Route path='xenon/docs/module-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/xenon/master/source/main/docs/modules/content.html' outline={3}/>}/>
             <Route path='xenon/docs/tool-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/xenon/master/source/main/docs/tools/content.html' outline={3}/>}/>

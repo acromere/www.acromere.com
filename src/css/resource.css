@@ -21,7 +21,7 @@
 }
 
 .product-status {
-	width: 25rem;
+	max-width: 25rem;
 
 	/* flex child constraints */
 	flex: 100 1 auto;

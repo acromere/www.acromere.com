@@ -1,6 +1,6 @@
 .license {
 	margin: 0.1rem;
-	width: 50rem;
+	max-width: 50rem;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
