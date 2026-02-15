@@ -24,9 +24,6 @@ export function Content() {
     <div className='router'>
       <Router>
         <Routes>
-          {/* API documentation routes */}
-          <Route path='*/docs/api/*' element={<Navigate to={window.location.pathname}/>}/>
-
           {/* Supported routes */}
           <Route path='product'>
             <Route path='acorn' element={<AcornProduct/>}/>
@@ -36,19 +33,18 @@ export function Content() {
             {/*<Route path='weave' element={<WeaveProduct/>}/>*/}
             <Route path='xenon' element={<XenonProduct/>}/>
 
-            {/*<Route path='carta/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
-            {/*<Route path='cartesia/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
+            {/*<Route path='carta/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
+            {/*<Route path='cartesia/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/carta/main/source/main/docs/manual/content.html' outline={3}/>}/>*/}
 
-            <Route path='xenon/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/manual/content.html' outline={3}/>}/>
-            {/*<Route path='xenon/docs/module-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/modules/content.html' outline={3}/>}/>*/}
-            {/*<Route path='xenon/docs/tool-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/tools/content.html' outline={3}/>}/>*/}
-            {/*<Route path='xenon/contribute' render={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/avereon/xenon/master/source/main/docs/contribute/content.html' outline={3}/>}/>*/}
+            <Route path='xenon/docs/user-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/xenon/master/source/main/docs/manual/content.html' outline={3}/>}/>
+            <Route path='xenon/docs/module-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/xenon/master/source/main/docs/modules/content.html' outline={3}/>}/>
+            <Route path='xenon/docs/tool-guide' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/xenon/master/source/main/docs/tools/content.html' outline={3}/>}/>
+            {/*<Route path='xenon/contribute' element={<DocViewer {...useParams()} doc='https://raw.githubusercontent.com/acromere/xenon/master/source/main/docs/contribute/content.html' outline={3}/>}/>*/}
             <Route path='xenon/docs/screenshots' element={<XenonScreenshots/>}/>
-            {/*<Route path='xenon/docs' element={<XenonDocs/>}/>*/}
+            <Route path='xenon/docs' element={<XenonDocs/>}/>
             <Route path='xenon/mods' element={<XenonModules/>}/>
             <Route path='xenon/modules' element={<XenonModules/>}/>
             <Route path='screenshot' element={<Screenshot/>}/>
-
           </Route>
 
           <Route path='/products' element={<Products/>}/>
@@ -56,6 +52,9 @@ export function Content() {
           <Route path='/project'>
             <Route path='status' element={<Status/>}/>
           </Route>
+
+          {/* API documentation routes */}
+          <Route path='*/docs/api/*' element={<Navigate to={window.location.pathname}/>}/>
 
           <Route path='/about' element={<About/>}/>
           <Route path='/legal' element={<Legal/>}/>
