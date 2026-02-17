@@ -103,22 +103,22 @@
 				<configuration>
 					<images>
 						<image>
-							<class>com.acromere.zenna.icon.AcromereIcon</class>
+							<class>com.acromere.zenna.icon.WingDiscLargeIcon</class>
 							<target>${images-folder}/product.png</target>
 							<theme>dark</theme>
 						</image>
 						<image>
-							<class>com.acromere.zenna.icon.AcromereIcon</class>
+							<class>com.acromere.zenna.icon.WingDiscLargeIcon</class>
 							<target>${images-folder}/product-dark.png</target>
 							<theme>dark</theme>
 						</image>
 						<image>
-							<class>com.acromere.zenna.icon.AcromereIcon</class>
+							<class>com.acromere.zenna.icon.WingDiscLargeIcon</class>
 							<target>${images-folder}/product-light.png</target>
 							<theme>light</theme>
 						</image>
 						<image>
-							<class>com.acromere.zenna.icon.AcromereIcon</class>
+							<class>com.acromere.zenna.icon.WingDiscLargeIcon</class>
 							<target>${images-folder}/product-avatar.png</target>
 							<theme>light</theme>
 							<offsetX>64</offsetX>
@@ -127,7 +127,7 @@
 							<imageHeight>384</imageHeight>
 						</image>
 						<image>
-							<class>com.acromere.zenna.icon.AcromereIcon</class>
+							<class>com.acromere.zenna.icon.WingDiscLargeIcon</class>
 							<target>${images-folder}/product-avatar-circle.png</target>
 							<theme>light</theme>
 							<!-- center the icon in the image -->
