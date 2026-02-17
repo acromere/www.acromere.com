@@ -17,10 +17,14 @@ export default class Icon {
 
   static ACORN_LIGHT = new URL( Config.ICON_ROOT + '/latest/acorn/product/icon?theme=light', import.meta.url);
   static ACORN_DARK = new URL( Config.ICON_ROOT + '/latest/acorn/product/icon?theme=dark', import.meta.url);
-  static AVEON_LIGHT = new URL('./image/aveon.png', import.meta.url);
-  static CARTA_LIGHT = new URL('./image/carta.png', import.meta.url);
-  static MAZER_LIGHT = new URL('./image/mazer.png', import.meta.url);
-  static RECON_LIGHT = new URL('./image/recon.png', import.meta.url);
+  static AVEON_LIGHT = new URL( Config.ICON_ROOT + '/latest/aveon/product/icon?theme=light', import.meta.url);
+  static AVEON_DARK = new URL( Config.ICON_ROOT + '/latest/aveon/product/icon?theme=dark', import.meta.url);
+  static CARTA_LIGHT = new URL( Config.ICON_ROOT + '/latest/carta/product/icon?theme=light', import.meta.url);
+  static CARTA_DARK = new URL( Config.ICON_ROOT + '/latest/carta/product/icon?theme=dark', import.meta.url);
+  static MAZER_LIGHT = new URL( Config.ICON_ROOT + '/latest/mazer/product/icon?theme=light', import.meta.url);
+  static MAZER_DARK = new URL( Config.ICON_ROOT + '/latest/mazer/product/icon?theme=dark', import.meta.url);
+  static RECON_LIGHT = new URL( Config.ICON_ROOT + '/latest/recon/product/icon?theme=light', import.meta.url);
+  static RECON_DARK = new URL( Config.ICON_ROOT + '/latest/recon/product/icon?theme=dark', import.meta.url);
 
   static SEENC_LIGHT = new URL( Config.ICON_ROOT + '/latest/seenc/product/icon?theme=light', import.meta.url);
   static SEENC_DARK = new URL( Config.ICON_ROOT + '/latest/seenc/product/icon?theme=dark', import.meta.url);
@@ -51,14 +55,14 @@ export default class Icon {
   static AVEON = (
     <picture>
       <source srcSet={Icon.AVEON_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
-      <source srcSet={Icon.AVEON_LIGHT.toString()} media="(prefers-color-scheme: dark)"/>
+      <source srcSet={Icon.AVEON_DARK.toString()} media="(prefers-color-scheme: dark)"/>
       <img src="." className='icon' alt="ACM"/>
     </picture>
   )
   static CARTA = (
     <picture>
       <source srcSet={Icon.CARTA_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
-      <source srcSet={Icon.CARTA_LIGHT.toString()} media="(prefers-color-scheme: dark)"/>
+      <source srcSet={Icon.CARTA_DARK.toString()} media="(prefers-color-scheme: dark)"/>
       <img src="." className='icon' alt="ACM"/>
     </picture>
   )
@@ -69,14 +73,16 @@ export default class Icon {
   static FROWN = <FontAwesomeIcon className='icon' icon={['fas', 'frown']}/>;
   static MAZER = (
     <picture>
-      <source srcSet={Icon.MAZER_LIGHT.toString()} media="(prefers-color-scheme: dark)"/>
+      <source srcSet={Icon.MAZER_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
+      <source srcSet={Icon.MAZER_DARK.toString()} media="(prefers-color-scheme: dark)"/>
       <img src="." className='icon' alt="ACM"/>
     </picture>
   )
   static OTHER = <FontAwesomeIcon className='icon' icon={['fas', 'ellipsis']}/>;
   static RECON = (
     <picture>
-      <source srcSet={Icon.RECON_LIGHT.toString()} media="(prefers-color-scheme: dark)"/>
+      <source srcSet={Icon.RECON_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
+      <source srcSet={Icon.RECON_DARK.toString()} media="(prefers-color-scheme: dark)"/>
       <img src="." className='icon' alt="ACM"/>
     </picture>
   )
