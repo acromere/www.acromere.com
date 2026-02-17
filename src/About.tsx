@@ -24,7 +24,7 @@ export default function About() {
         <span className="product-icon">{Icon.LOGO}</span>
         <div className='body'>
           <div>
-            The Acromere "peak" icon is a stylized mountain with the <a href='https://en.wikipedia.org/wiki/Pyramidal_peak'>peak</a> highlighted
+            The Acromere "peak" icon is a stylized <a href='https://en.wikipedia.org/wiki/Pyramidal_peak'>peak</a>
             to represent the "acro" (height, tip, top, or extremity) "mere" (part, segment, portion, division),
             or "top part". This represents our goal to strive for excellence in all we do.
             Areas of interest include: drone aerospace, software engineering, weather, astronomy, and more.
