@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className='product'>
 
-      <span className='page-icon centered-items'>{Icon.ACROMERE}</span>
+      <span className='page-icon centered-items'>{Icon.LOGO}</span>
 
       <div className='product-bar'>
         <span className="product-icon">{Icon.EMPTY}</span>
@@ -21,7 +21,7 @@ export default function About() {
       <h2>Icons</h2>
 
       <div className='product-bar'>
-        <span className="product-icon">{Icon.ACROMERE}</span>
+        <span className="product-icon">{Icon.LOGO}</span>
         <div className='body'>
           <div>
             The Acromere "peak" icon is a stylized mountain with the <a href='https://en.wikipedia.org/wiki/Pyramidal_peak'>peak</a> highlighted
