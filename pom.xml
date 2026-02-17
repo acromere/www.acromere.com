@@ -104,22 +104,22 @@
 					<images>
 						<image>
 							<class>com.acromere.zenna.icon.AcromereIcon</class>
-							<target>${images-folder}/acromere.png</target>
+							<target>${images-folder}/product.png</target>
 							<theme>dark</theme>
 						</image>
 						<image>
 							<class>com.acromere.zenna.icon.AcromereIcon</class>
-							<target>${images-folder}/acromere-dark.png</target>
+							<target>${images-folder}/product-dark.png</target>
 							<theme>dark</theme>
 						</image>
 						<image>
 							<class>com.acromere.zenna.icon.AcromereIcon</class>
-							<target>${images-folder}/acromere-light.png</target>
+							<target>${images-folder}/product-light.png</target>
 							<theme>light</theme>
 						</image>
 						<image>
 							<class>com.acromere.zenna.icon.AcromereIcon</class>
-							<target>${images-folder}/acromere-avatar.png</target>
+							<target>${images-folder}/product-avatar.png</target>
 							<theme>light</theme>
 							<offsetX>64</offsetX>
 							<offsetY>64</offsetY>
@@ -128,7 +128,7 @@
 						</image>
 						<image>
 							<class>com.acromere.zenna.icon.AcromereIcon</class>
-							<target>${images-folder}/acromere-avatar-circle.png</target>
+							<target>${images-folder}/product-avatar-circle.png</target>
 							<theme>light</theme>
 							<!-- center the icon in the image -->
 							<offsetX>64</offsetX>
