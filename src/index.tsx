@@ -2,7 +2,7 @@ import {createRoot} from 'react-dom/client';
 import {StrictMode} from 'react';
 import {App} from './App';
 
-let container = document.getElementById("app")!;
+let container = document.getElementById("root")!;
 let root = createRoot(container)
 
 const lightSchemeIcon = document.querySelector('link#light-scheme-favicon');

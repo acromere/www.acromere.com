@@ -27,9 +27,9 @@ export default class WeaveProduct extends React.Component {
     };
 
     componentDidMount() {
-        ProductPage.productCards('weave', (cards) => {
+        ProductPage.productCards('weave', (cards:any) => {
             this.setState(cards);
-        });
+        }, () =>{} );
     }
 
     render() {
@@ -46,8 +46,8 @@ export default class WeaveProduct extends React.Component {
                 <div className='product'>
 
                     <div className='product-title'>
-                        <img className="product-icon" alt="" src={Icon.SEENC}/>
-                        <div className='product-name'>Weave</div>
+                      {Icon.SEENC}
+                      <div className='product-name'>Weave</div>
                     </div>
 
                     <div className='product-content'>

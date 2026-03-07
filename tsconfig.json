@@ -1,29 +1,49 @@
 {
-  "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig to read more about this file */
-    "target": "ES2020",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "jsx": "react-jsx",
-    "useDefineForClassFields": true,
+	"compilerOptions": {
+		/* Visit https://aka.ms/tsconfig to read more about this file */
+		"target": "ES2022",
+		"jsx": "react-jsx",
+		"lib": [
+			"ES2022",
+			"DOM",
+			"DOM.Iterable"
+		],
+		"types": [
+			"node",
+			"vite/client"
+		],
+		//		"useDefineForClassFields": true,
+		// "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
-    /* Modules */
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+		/* Modules */
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		//		"moduleDetection": "force",
 
-    /* Emit */
-    "noEmit": true,
+		/* Emit */
+		"noEmit": true,
+		/* Interop Constraints */
+		"allowImportingTsExtensions": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		//		"verbatimModuleSyntax": true,
 
-    /* Interop Constraints */
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
-    "allowImportingTsExtensions": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+		/* Linting */
+		"strict": false,
+		"noImplicitAny": false,
+		//    "noUnusedLocals": false,
+		//    "noUnusedParameters": true,
+		//    "erasableSyntaxOnly": true,
+		//    "noFallthroughCasesInSwitch": true,
+		//    "noUncheckedSideEffectImports": true,
 
-    /* Type Checking */
-    "strict": true,
-
-    /* Completeness */
-    "skipLibCheck": true
-  }
+		/* Completeness */
+		"skipLibCheck": true
+	},
+	"include": [
+		"src/**/*.tsx",
+		"node_modules/vitest/globals.d.ts"
+	]
 }

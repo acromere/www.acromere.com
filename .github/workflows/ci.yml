@@ -58,14 +58,19 @@ jobs:
           node-version: ${{env.NODE_VERSION}}
           cache: 'npm'
 
-      - name: Build Client
+      - name: Install
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm run test:ci
+
+      - name: Package
         run: |
-          rm -rf dist/
-          npm install
-          npm run build
           cd dist
           zip -r ../client.zip *
-          cd -
 
       - name: Copy Client ZIP
         if: ${{ github.actor != 'dependabot[bot]' }}
