@@ -21,6 +21,7 @@ env:
   GITHUB_REF: ${{ github.ref }}
   JAVA_VERSION: "25"
   MAVEN_PARMS: "-B -U -V --settings .github/settings.xml --file pom.xml"
+  NODE_VERSION: "22"
   XVFB_PARMS: "-screen 0 1920x1080x24 -nolisten unix"
 
 jobs:
@@ -50,6 +51,12 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{env.NODE_VERSION}}
+          cache: 'npm'
 
       - name: Build Client
         run: |
