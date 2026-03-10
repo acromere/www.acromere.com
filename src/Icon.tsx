@@ -33,6 +33,9 @@ export default class Icon {
   static XENON_LIGHT = new URL( Config.ICON_ROOT + '/latest/xenon/product/icon?theme=light', import.meta.url);
   static XENON_DARK = new URL( Config.ICON_ROOT + '/latest/xenon/product/icon?theme=dark', import.meta.url);
 
+  static HYPERS_LIGHT = new URL( 'https://hypersynesthesia.com/logo-hyper-synesthesia-final.svg', import.meta.url);
+  static HYPERS_DARK = new URL( 'https://hypersynesthesia.com/logo-hyper-synesthesia-final.svg', import.meta.url);
+
   // Needs to be defined before other icons
   static BROKEN = <FontAwesomeIcon className='icon broken' icon={['fas', 'link-slash']}/>;
 
@@ -71,6 +74,13 @@ export default class Icon {
   static CURVE = Icon.LOGO;
   static EMPTY = <img src={Icon.EMPTY_PIXEL.toString()} className='icon' alt=''/>
   static FROWN = <FontAwesomeIcon className='icon' icon={['fas', 'frown']}/>;
+  static HYPERS = (
+    <picture>
+      <source srcSet={Icon.HYPERS_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
+      <source srcSet={Icon.HYPERS_DARK.toString()} media="(prefers-color-scheme: dark)"/>
+      <img src="." className='icon' alt="HYP"/>
+    </picture>
+  )
   static MODULE = Icon.LOGO;
   static MAZER = (
     <picture>

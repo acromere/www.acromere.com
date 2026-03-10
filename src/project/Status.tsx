@@ -48,7 +48,7 @@ export default function Status() {
         <ProductStatus ident='recon' icon={Icon.RECON} name='Recon'/>
         <ProductStatus ident='sysup' icon={Icon.SYSUP} name='Sysup'/>
         <h3>Partner Mods</h3>
-        <ProductStatus ident='HyperSynesthesia' icon={Icon.MODULE} name='HyperSynesthesia' org='Dakkra'/>
+        <ProductStatus ident='HyperSynesthesia' icon={Icon.HYPERS} name='HyperSynesthesia' org='Dakkra'/>
       </div>
       <div className='column product-status'>
         <h3>Website</h3>
