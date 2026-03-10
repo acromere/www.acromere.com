@@ -36,6 +36,9 @@ export default class Icon {
   static HYPERS_LIGHT = new URL( 'https://hypersynesthesia.com/logo-hyper-synesthesia-final.svg', import.meta.url);
   static HYPERS_DARK = new URL( 'https://hypersynesthesia.com/logo-hyper-synesthesia-final.svg', import.meta.url);
 
+  static DSR_LIGHT = new URL( 'https://www.desertskyrangers.org/logo.png', import.meta.url);
+  static DSR_DARK = new URL( 'https://www.desertskyrangers.org/logo.png', import.meta.url);
+
   // Needs to be defined before other icons
   static BROKEN = <FontAwesomeIcon className='icon broken' icon={['fas', 'link-slash']}/>;
 
@@ -72,6 +75,13 @@ export default class Icon {
   static CAMEO = Icon.LOGO;
   static CUREX = Icon.LOGO;
   static CURVE = Icon.LOGO;
+  static DSR = (
+    <picture>
+      <source srcSet={Icon.DSR_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
+      <source srcSet={Icon.DSR_DARK.toString()} media="(prefers-color-scheme: dark)"/>
+      <img src="." className='icon' alt="DSR"/>
+    </picture>
+  )
   static EMPTY = <img src={Icon.EMPTY_PIXEL.toString()} className='icon' alt=''/>
   static FROWN = <FontAwesomeIcon className='icon' icon={['fas', 'frown']}/>;
   static HYPERS = (

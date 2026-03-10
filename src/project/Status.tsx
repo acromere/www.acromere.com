@@ -51,8 +51,9 @@ export default function Status() {
         <ProductStatus ident='HyperSynesthesia' icon={Icon.HYPERS} name='HyperSynesthesia' org='Dakkra'/>
       </div>
       <div className='column product-status'>
-        <h3>Website</h3>
+        <h3>Websites</h3>
         <ProductStatus ident='www.acromere.com' icon={Icon.LOGO} name='Website'/>
+        <ProductStatus ident='flightdeck' icon={Icon.DSR} name='Website' org='desertskyrangers'/>
         <h3>Maven Plugins</h3>
         <ProductStatus ident='cameo' icon={Icon.CAMEO} name='Cameo'/>
         <ProductStatus ident='curex' icon={Icon.CUREX} name='Curex'/>
