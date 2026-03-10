@@ -71,6 +71,7 @@ export default class Icon {
   static CURVE = Icon.LOGO;
   static EMPTY = <img src={Icon.EMPTY_PIXEL.toString()} className='icon' alt=''/>
   static FROWN = <FontAwesomeIcon className='icon' icon={['fas', 'frown']}/>;
+  static MODULE = Icon.LOGO;
   static MAZER = (
     <picture>
       <source srcSet={Icon.MAZER_LIGHT.toString()} media="(prefers-color-scheme: light)"/>

@@ -1,16 +1,21 @@
 import Icon from "../Icon.tsx";
 import {ReactElement} from "react";
 
-function ProductStatus(props: { ident: string; icon: ReactElement<any, any>; name: string; }) {
+function ProductStatus(props: { ident: string; icon: ReactElement<any, any>; name: string; org?: string }) {
+  let org = props.org;
+  if( props.org === undefined ) {
+    org = 'acromere'
+  }
+  console.log("org = " + org);
   return (
     <div className='project-bar'>
-      <a href={"https://github.com/acromere/" + props.ident}>
+      <a href={"https://github.com/"+ org + "/" + props.ident}>
         <span className='product-icon'>{props.icon}</span>
       </a>
       <div className='body'>
         {/*<h6>{props.name}</h6>*/}
-        <a href={'https://github.com/acromere/' + props.ident + '/actions/workflows/ci.yml'}>
-          <img alt={props.name + " Build Status"} src={"https://github.com/acromere/" + props.ident + "/actions/workflows/ci.yml/badge.svg"}/>
+        <a href={'https://github.com/'+ org + '/' + props.ident + '/actions/workflows/ci.yml'}>
+          <img alt={props.name + " Build Status"} src={"https://github.com/"+ org + "/" + props.ident + "/actions/workflows/ci.yml/badge.svg"}/>
         </a>
       </div>
     </div>
@@ -26,17 +31,6 @@ export default function Status() {
         <ProductStatus ident='weave' icon={Icon.WEAVE} name='Weave'/>
         <ProductStatus ident='acorn-cli' icon={Icon.ACORN} name='Acorn CLI'/>
         <ProductStatus ident='seenc' icon={Icon.SEENC} name='Seenc'/>
-      </div>
-      <div className='column product-status'>
-        <h3>Xenon Mods</h3>
-        <ProductStatus ident='acorn' icon={Icon.ACORN} name='Acorn'/>
-        <ProductStatus ident='aveon' icon={Icon.AVEON} name='Aveon'/>
-        <ProductStatus ident='carta' icon={Icon.CARTA} name='Cartesia'/>
-        <ProductStatus ident='mazer' icon={Icon.MAZER} name='Mazer'/>
-        <ProductStatus ident='recon' icon={Icon.RECON} name='Recon'/>
-        <ProductStatus ident='sysup' icon={Icon.SYSUP} name='Sysup'/>
-      </div>
-      <div className='column product-status'>
         <h3>Libraries</h3>
         <ProductStatus ident='marea' icon={Icon.CURVE} name='Marea'/>
         <ProductStatus ident='curve' icon={Icon.CURVE} name='Curve'/>
@@ -46,6 +40,19 @@ export default function Status() {
         <ProductStatus ident='zevra' icon={Icon.ZEVRA} name='Zevra'/>
       </div>
       <div className='column product-status'>
+        <h3>Xenon Mods</h3>
+        <ProductStatus ident='acorn' icon={Icon.ACORN} name='Acorn'/>
+        <ProductStatus ident='aveon' icon={Icon.AVEON} name='Aveon'/>
+        <ProductStatus ident='carta' icon={Icon.CARTA} name='Cartesia'/>
+        <ProductStatus ident='mazer' icon={Icon.MAZER} name='Mazer'/>
+        <ProductStatus ident='recon' icon={Icon.RECON} name='Recon'/>
+        <ProductStatus ident='sysup' icon={Icon.SYSUP} name='Sysup'/>
+        <h3>Partner Mods</h3>
+        <ProductStatus ident='HyperSynesthesia' icon={Icon.MODULE} name='HyperSynesthesia' org='Dakkra'/>
+      </div>
+      <div className='column product-status'>
+        <h3>Website</h3>
+        <ProductStatus ident='www.acromere.com' icon={Icon.LOGO} name='Website'/>
         <h3>Maven Plugins</h3>
         <ProductStatus ident='cameo' icon={Icon.CAMEO} name='Cameo'/>
         <ProductStatus ident='curex' icon={Icon.CUREX} name='Curex'/>
