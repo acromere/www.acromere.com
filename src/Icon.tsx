@@ -39,6 +39,9 @@ export default class Icon {
   static DSR_LIGHT = new URL( 'https://www.desertskyrangers.org/logo.png', import.meta.url);
   static DSR_DARK = new URL( 'https://www.desertskyrangers.org/logo.png', import.meta.url);
 
+  static WEATHER_LIGHT = new URL( 'https://mark.soderquist.net/weather/favicon.png', import.meta.url);
+  static WEATHER_DARK = new URL( 'https://mark.soderquist.net/weather/favicon.png', import.meta.url);
+
   // Needs to be defined before other icons
   static BROKEN = <FontAwesomeIcon className='icon broken' icon={['fas', 'link-slash']}/>;
 
@@ -115,6 +118,13 @@ export default class Icon {
     </picture>
   )
   static SYSUP = Icon.LOGO;
+  static WEATHER = (
+    <picture>
+      <source srcSet={Icon.WEATHER_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
+      <source srcSet={Icon.WEATHER_DARK.toString()} media="(prefers-color-scheme: dark)"/>
+      <img src="." className='icon' alt="WXW"/>
+    </picture>
+  )
   static WEAVE = (
     <picture>
       <source srcSet={Icon.WEAVE_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
