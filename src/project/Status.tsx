@@ -30,7 +30,7 @@ export default function Status() {
         <StatusTag ident='HyperSynesthesia' icon={Icon.HYPERS} name='HyperSynesthesia' org='Dakkra'/>
       </div>
       <div className='column product-status'>
-        <h3>Websites</h3>
+        <h3>Web Sites/Apps</h3>
         <StatusTag ident='www.acromere.com' icon={Icon.LOGO} name='Acromere Website'/>
         <StatusTag ident='flightdeck' icon={Icon.DSR} name='FlightDeck' org='desertskyrangers'/>
         <StatusTag ident='weather-server' icon={Icon.WEATHER} name='Weather' org='marksoderquist'/>
