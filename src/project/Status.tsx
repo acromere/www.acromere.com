@@ -32,8 +32,9 @@ export default function Status() {
       <div className='column product-status'>
         <h3>Web Sites/Apps</h3>
         <StatusTag ident='www.acromere.com' icon={Icon.LOGO} name='Acromere Website'/>
-        <StatusTag ident='flightdeck' icon={Icon.DSR} name='FlightDeck' org='desertskyrangers'/>
         <StatusTag ident='weather-server' icon={Icon.WEATHER} name='Weather' org='marksoderquist'/>
+        <StatusTag ident='www.desertskyrangers.org' icon={Icon.DSR} name='Desert Sky Rangers Website' org='desertskyrangers'/>
+        <StatusTag ident='flightdeck' icon={Icon.DSR} name='FlightDeck' org='desertskyrangers'/>
         <h3>Maven Plugins</h3>
         <StatusTag ident='cameo' icon={Icon.CAMEO} name='Cameo'/>
         <StatusTag ident='curex' icon={Icon.CUREX} name='Curex'/>
