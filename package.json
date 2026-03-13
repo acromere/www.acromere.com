@@ -2,7 +2,7 @@
   "name": "www.acromere.com",
   "private": true,
   "version": "1.0.0",
-  "source": "./src/index.html",
+  "source": "./client/index.html",
 	"engines": {
 		"node": ">=24",
 		"npm": ">=11"

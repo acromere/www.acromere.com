@@ -73,9 +73,9 @@
 	<build>
 		<finalName>acromere</finalName>
 
-		<sourceDirectory>source/main/java</sourceDirectory>
+		<sourceDirectory>server/main/java</sourceDirectory>
 		<outputDirectory>target/main/java</outputDirectory>
-		<testSourceDirectory>source/test/java</testSourceDirectory>
+		<testSourceDirectory>server/test/java</testSourceDirectory>
 		<testOutputDirectory>target/test/java</testOutputDirectory>
 
 		<plugins>
