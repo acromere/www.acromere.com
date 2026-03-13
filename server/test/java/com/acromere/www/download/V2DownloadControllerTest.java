@@ -39,7 +39,7 @@ public class V2DownloadControllerTest {
 
 	@BeforeEach
 	public void setup() {
-		Path root = Paths.get( "source/test/repos/acm" ).toAbsolutePath();
+		Path root = Paths.get( "server/test/repos/acm" ).toAbsolutePath();
 		Map<String, V2DownloadProvider> providers = new HashMap<>();
 		providers.put( "stable", new V2LocalDownloadProvider( root.resolve( "stable" ) ) );
 		providers.put( "latest", new V2LocalDownloadProvider( root.resolve( "latest" ) ) );

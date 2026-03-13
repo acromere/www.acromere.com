@@ -21,7 +21,7 @@ public class MavenDownloadProviderTest {
 
 	private MavenDownloadProvider provider;
 
-	private static final String TEST_MAVEN_REPOSITORY = "source/test/repos/maven";
+	private static final String TEST_MAVEN_REPOSITORY = "server/test/repos/maven";
 
 	private static final String group = "com.acromere";
 
