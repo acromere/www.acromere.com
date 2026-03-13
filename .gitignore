@@ -5,3 +5,5 @@ node_modules/
 target/
 
 *.iml
+
+tsconfig.tsbuildinfo
