@@ -74,7 +74,7 @@ jobs:
 
       - name: Copy Client ZIP
         if: ${{ github.actor != 'dependabot[bot]' }}
-        run: scp -B client.zip ${{env.ACM_XENON_REPO_USERNAME}}@acromere.com:/opt/acm/repo/latest/www.acromere.com/client.zip
+        run: scp -B client.zip ${{env.ACM_XENON_REPO_USERNAME}}@acromere.com:/opt/acm/repo/latest/${{ACM_PRODUCT}}/client.zip
 
       #      - name: Copy Provider Icon
       #        run: |
