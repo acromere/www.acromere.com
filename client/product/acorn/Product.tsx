@@ -53,7 +53,7 @@ export default function AcornProduct(this: any):ReactElement<any,any> {
             <div><a href={documentLink.current}><FontAwesomeIcon icon={['fas', 'tools']}/> Acorn API</a></div>
           </div>
           <div className='resource-tile'>
-            <div><a href='https://github.com/avereon/acorn' target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github']}/> Source Code</a></div>
+            <div><a href='https://github.com/acromere/acorn' target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github']}/> Source Code</a></div>
           </div>
         </div>
 

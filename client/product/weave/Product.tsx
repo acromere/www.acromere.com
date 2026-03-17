@@ -68,7 +68,7 @@ export default class WeaveProduct extends React.Component {
                             <div><a href={Config.ROOT_URL + '/product/weave/docs/api/index.html'}><FontAwesomeIcon icon={['fas', 'tools']}/> Weave API</a></div>
                         </div>
                         <div className='resource-tile'>
-                            <div><a href='https://github.com/avereon/weave' target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github']}/> Source Code</a></div>
+                            <div><a href='https://github.com/acromere/weave' target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github']}/> Source Code</a></div>
                         </div>
                     </div>
 

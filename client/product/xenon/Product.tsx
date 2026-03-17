@@ -58,7 +58,7 @@ export default function XenonProduct(this: any): ReactElement<any, any> {
             <div><a href='/product/xenon/docs/module-guide'><FontAwesomeIcon icon={['fas', 'file']}/> Building Modules</a></div>
             <div><a href='/product/xenon/docs/tool-guide'><FontAwesomeIcon icon={['fas', 'file']}/> Building Tools</a></div>
             <div><a href={documentLink.current}><FontAwesomeIcon icon={['fas', 'tools']}/> Xenon API</a></div>
-            <div><a href='https://github.com/avereon/xenon' target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github']}/> Source Code</a></div>
+            <div><a href='https://github.com/acromere/xenon' target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github']}/> Source Code</a></div>
           </div>
         </div>
 

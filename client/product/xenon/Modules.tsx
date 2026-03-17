@@ -27,9 +27,9 @@ export default function XenonModules() {
         </div>
 
         <div className='product-bar'>
-          <a href='https://github.com/avereon/acorn'><span className="product-icon">{Icon.ACORN}</span></a>
+          <a href='https://github.com/acromere/acorn'><span className="product-icon">{Icon.ACORN}</span></a>
           <div className='body'>
-            <div><a href='https://github.com/avereon/acorn'>Acorn</a> provides
+            <div><a href='https://github.com/acromere/acorn'>Acorn</a> provides
               a tool to score system performance in Java. The tool computes
               simple metrics for the current system and displays a score to
               compare the performance on different Java Virtual Machines for
@@ -39,9 +39,9 @@ export default function XenonModules() {
         </div>
 
         <div className='product-bar'>
-          <a href='https://github.com/avereon/carta'><span className="product-icon">{Icon.CARTA}</span></a>
+          <a href='https://github.com/acromere/carta'><span className="product-icon">{Icon.CARTA}</span></a>
           <div className='body'>
-            <div><a href='https://github.com/avereon/carta'>Cartesia</a> provides
+            <div><a href='https://github.com/acromere/carta'>Cartesia</a> provides
               basic 2D and 3D computer aided design tools. Generally
               designed for hobbyists and crafters to have simple and
               inexpensive computer aided design tools available.
@@ -50,9 +50,9 @@ export default function XenonModules() {
         </div>
 
         <div className='product-bar'>
-          <a href='https://github.com/avereon/recon'><span className="product-icon">{Icon.RECON}</span></a>
+          <a href='https://github.com/acromere/recon'><span className="product-icon">{Icon.RECON}</span></a>
           <div className='body'>
-            <div><a href='https://github.com/avereon/recon'>Recon</a> provides
+            <div><a href='https://github.com/acromere/recon'>Recon</a> provides
               a tool to monitor access to network devices from the current
               system. This is helpful for tracking down simple network
               connectivity and accessibility issues.

@@ -46,7 +46,7 @@ export default function Products() {
 				{/*<div className='product-bar'>*/}
 				{/*	<a href='/product/weave'><img className="product-icon" alt="" src={Icon.WEAVE}/></a>*/}
 				{/*	<div className='body'>*/}
-				{/*		<div><a href='https://github.com/avereon/weave'>Weave</a> is a simple update*/}
+				{/*		<div><a href='https://github.com/acromere/weave'>Weave</a> is a simple update*/}
 				{/*			program that supports a simple command language to customize the*/}
 				{/*			update process. Initially developed for Xenon, Weave is a standalone*/}
 				{/*			program and can be used with any product.*/}
