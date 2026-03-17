@@ -39,8 +39,8 @@ export default class Icon {
   static DSR_LIGHT = new URL( 'https://www.desertskyrangers.org/logo.png', import.meta.url);
   static DSR_DARK = new URL( 'https://www.desertskyrangers.org/logo.png', import.meta.url);
 
-  static WEATHER_LIGHT = new URL( 'https://mark.soderquist.net/weather/favicon.png', import.meta.url);
-  static WEATHER_DARK = new URL( 'https://mark.soderquist.net/weather/favicon.png', import.meta.url);
+  static WEATHER_LIGHT = new URL( 'https://wx.acromere.com/image/favicon.png', import.meta.url);
+  static WEATHER_DARK = new URL( 'https://wx.acromere.com/image/favicon.png', import.meta.url);
 
   // Needs to be defined before other icons
   static BROKEN = <FontAwesomeIcon className='icon broken' icon={['fas', 'link-slash']}/>;
