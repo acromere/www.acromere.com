@@ -94,3 +94,6 @@
 	background-color: var(--primary-disabled-color);
 }
 
+.download .subtile {
+	padding: 0 0.5em;
+}

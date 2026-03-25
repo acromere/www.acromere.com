@@ -7,10 +7,11 @@ export default function DownloadTile(props: any) {
   const card = category && props.cards[props.category][props.platform.KEY]
   const artifact = card && card.artifact
   const version = card && card.version
-  const ext = props.platform.INSTALLER_EXT
-  const downloadUrl = Config.DOWNLOAD_URL + '/' + props.category + '/' + artifact + '/' + props.platform.KEY + '/' + props.pack + '/' + ext
+  const extension:string = props.platform.INSTALLER_EXT
+  const extensions:string[] = props.platform.INSTALLER_EXTS
+  const downloadUrl = Config.DOWNLOAD_URL + '/' + props.category + '/' + artifact + '/' + props.platform.KEY + '/' + props.pack + '/'
 
-  // TODO What about extra exts? [ 'dmg', 'rpm' ] and [ 'msi', 'exe' ]
+  // TODO What about extra exts? [ 'deb', 'rpm' ] and [ 'msi', 'exe' ]
 
   const disabled = version === undefined
   const style: string = 'download ' + props.type + (disabled ? ' disabled' : " " + props.category)
@@ -23,8 +24,8 @@ export default function DownloadTile(props: any) {
     )
   } else {
     return (
-      <a className={style} href={downloadUrl}>
-        <DownloadTileCore type={props.type} category={props.category} product={props.product} cards={props.cards} platform={props.platform} pack={props.pack}/>
+      <a className={style} href={downloadUrl + extension}>
+        <DownloadTileCore type={props.type} category={props.category} product={props.product} cards={props.cards} platform={props.platform} pack={props.pack} downloadUrl={downloadUrl} extensions={extensions}/>
       </a>
     )
   }
@@ -34,6 +35,8 @@ function DownloadTileCore(props: any) {
   const category = props.cards[props.category]
   const card = category && props.cards[props.category][props.platform.KEY]
   const version = card && card.version
+  const downloadUrl = props.downloadUrl || ''
+  const extensions:string[] = props.extensions || []
 
   const platformSize = props.type === 'primary' ? '3x' : '2x'
   const platformIcon: any = props.type === 'primary' ? 'download' : ['fab', props.platform.ICON]
@@ -46,7 +49,14 @@ function DownloadTileCore(props: any) {
       <div className='download-metadata'>
         <div className='title'>{props.product} for {props.platform.NAME}</div>
         <div>{tileVersion}</div>
+        <div>
+          {extensions.map((item) => (
+            <a className='subtile' href={downloadUrl + item}>[{item}]</a>
+          ))}
+        </div>
       </div>
     </div>
   )
 }
+
+//             <a href={downloadUrl + item}>{item}[{item}]</a>
