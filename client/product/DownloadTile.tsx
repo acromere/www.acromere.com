@@ -10,8 +10,10 @@ export default function DownloadTile(props: any) {
   const ext = props.platform.INSTALLER_EXT
   const downloadUrl = Config.DOWNLOAD_URL + '/' + props.category + '/' + artifact + '/' + props.platform.KEY + '/' + props.pack + '/' + ext
 
+  // TODO What about extra exts? [ 'dmg', 'rpm' ] and [ 'msi', 'exe' ]
+
   const disabled = version === undefined
-  let style: string = 'download ' + props.type + (disabled ? ' disabled' : " " + props.category)
+  const style: string = 'download ' + props.type + (disabled ? ' disabled' : " " + props.category)
 
   if (disabled) {
     return (
