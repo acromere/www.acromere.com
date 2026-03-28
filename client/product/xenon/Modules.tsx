@@ -10,7 +10,7 @@ export default function XenonModules() {
 
         <div className='product-title'>
           <span className="product-icon">{Icon.XENON}</span>
-          <div className='product-name'>Xenon Mods</div>
+          <div className='product-name'>Xenon Modules</div>
         </div>
 
         <div className='product-bar'>

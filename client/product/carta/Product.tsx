@@ -29,7 +29,7 @@ export default function CartesiaProduct() {
         <div className='product-content'>
           To install Cartesia, download and install the latest version
           of <a href='/product/xenon'>Xenon</a>. Once Xenon is installed, start Xenon and
-          open the Settings tool, navigate to Mods and install the Cartesia module. The
+          open the Settings tool, navigate to Modules and install the Cartesia module. The
           Cartesia module will be enabled after installing.
         </div>
 
