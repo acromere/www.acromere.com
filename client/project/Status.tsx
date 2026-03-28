@@ -19,14 +19,14 @@ export default function Status() {
         <StatusTag ident='zevra' icon={Icon.ZEVRA} name='Zevra'/>
       </div>
       <div className='column product-status'>
-        <h3>Xenon Mods</h3>
+        <h3>Xenon Modules</h3>
         <StatusTag ident='acorn' icon={Icon.ACORN} name='Acorn'/>
         <StatusTag ident='aveon' icon={Icon.AVEON} name='Aveon'/>
         <StatusTag ident='carta' icon={Icon.CARTA} name='Cartesia'/>
         <StatusTag ident='mazer' icon={Icon.MAZER} name='Mazer'/>
         <StatusTag ident='recon' icon={Icon.RECON} name='Recon'/>
         <StatusTag ident='sysup' icon={Icon.SYSUP} name='Sysup'/>
-        <h3>Partner Mods</h3>
+        <h3>Partner Modules</h3>
         <StatusTag ident='HyperSynesthesia' icon={Icon.HYPERS} name='HyperSynesthesia' org='Dakkra'/>
       </div>
       <div className='column product-status'>
