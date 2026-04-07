@@ -12,27 +12,27 @@ export default function DownloadTile(props: any) {
   const downloadUrl = Config.DOWNLOAD_URL + '/' + props.category + '/' + artifact + '/' + props.platform.KEY + '/' + props.pack + '/'
   const productDownloadUrl = Config.DOWNLOAD_URL + '/' + props.category + '/' + artifact + '/' + props.platform.KEY + '/product/jar'
 
-  const disabled = version === undefined
-  const style: string = 'download ' + props.type + (disabled ? ' disabled' : " " + props.category)
+  const enabled = version !== undefined
+  const style: string = 'download ' + props.type + (enabled ? " " + props.category : ' disabled')
 
-  if (disabled) {
+  if (enabled) {
     return (
-      <div className={style}>
-        <DownloadTileCore type={props.type} category={props.category} product={props.product} cards={props.cards} platform={props.platform} pack={props.pack}/>
-      </div>
+      <a className={style} href={downloadUrl + extension}>
+        <DownloadTileCore enabled={enabled} type={props.type} category={props.category} product={props.product} cards={props.cards} platform={props.platform} pack={props.pack}
+                          downloadUrl={downloadUrl} extensions={extensions} productDownloadUrl={productDownloadUrl}/>
+      </a>
     )
   } else {
     return (
-      <a className={style} href={downloadUrl + extension}>
-        <DownloadTileCore disabled={disabled} type={props.type} category={props.category} product={props.product} cards={props.cards} platform={props.platform} pack={props.pack}
-                          downloadUrl={downloadUrl} extensions={extensions} productDownloadUrl={productDownloadUrl}/>
-      </a>
+      <div className={style}>
+        <DownloadTileCore enabled={enabled} type={props.type} category={props.category} product={props.product} cards={props.cards} platform={props.platform} pack={props.pack}/>
+      </div>
     )
   }
 }
 
 function DownloadTileCore(props: any) {
-  const disabled = props.disabled || true
+  const enabled = props.enabled || false
   const category = props.cards[props.category]
   const card = category && props.cards[props.category][props.platform.KEY]
   const version = card && card.version
@@ -53,7 +53,7 @@ function DownloadTileCore(props: any) {
         <div>{tileVersion}</div>
         {(() => {
 
-          if (!disabled) return (
+          if (enabled) return (
             <div>
               {extensions.map((item) => (
                 <a className='subtile' href={downloadUrl + item}>[{item}]</a>
