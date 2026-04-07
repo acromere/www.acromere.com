@@ -10,8 +10,7 @@ export default function DownloadTile(props: any) {
   const extension:string = props.platform.INSTALLER_EXT
   const extensions:string[] = props.platform.INSTALLER_EXTS
   const downloadUrl = Config.DOWNLOAD_URL + '/' + props.category + '/' + artifact + '/' + props.platform.KEY + '/' + props.pack + '/'
-
-  // TODO What about extra exts? [ 'deb', 'rpm' ] and [ 'msi', 'exe' ]
+  const productDownloadUrl = Config.DOWNLOAD_URL + '/' + props.category + '/' + artifact + '/' + props.platform.KEY + '/product/jar'
 
   const disabled = version === undefined
   const style: string = 'download ' + props.type + (disabled ? ' disabled' : " " + props.category)
@@ -25,7 +24,7 @@ export default function DownloadTile(props: any) {
   } else {
     return (
       <a className={style} href={downloadUrl + extension}>
-        <DownloadTileCore type={props.type} category={props.category} product={props.product} cards={props.cards} platform={props.platform} pack={props.pack} downloadUrl={downloadUrl} extensions={extensions}/>
+        <DownloadTileCore type={props.type} category={props.category} product={props.product} cards={props.cards} platform={props.platform} pack={props.pack} downloadUrl={downloadUrl} extensions={extensions} productDownloadUrl={productDownloadUrl}/>
       </a>
     )
   }
@@ -36,6 +35,7 @@ function DownloadTileCore(props: any) {
   const card = category && props.cards[props.category][props.platform.KEY]
   const version = card && card.version
   const downloadUrl = props.downloadUrl || ''
+  const productDownloadUrl = props.productDownloadUrl || ''
   const extensions:string[] = props.extensions || []
 
   const platformSize = props.type === 'primary' ? '3x' : '2x'
@@ -53,10 +53,9 @@ function DownloadTileCore(props: any) {
           {extensions.map((item) => (
             <a className='subtile' href={downloadUrl + item}>[{item}]</a>
           ))}
+          <a className='subtile' href={productDownloadUrl}>[jar]</a>
         </div>
       </div>
     </div>
   )
 }
-
-//             <a href={downloadUrl + item}>{item}[{item}]</a>
