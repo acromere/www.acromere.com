@@ -27,7 +27,7 @@ export default function Status() {
         <StatusTag ident='recon' icon={Icon.RECON} name='Recon'/>
         <StatusTag ident='sysup' icon={Icon.SYSUP} name='Sysup'/>
         <h3>Partner Modules</h3>
-        <StatusTag ident='HyperSynesthesia' icon={Icon.HYPERS} name='HyperSynesthesia' org='Dakkra'/>
+        <StatusTag ident='HyperSynesthesia' icon={Icon.HYPERS} name='HyperSynesthesia' org='EurydiceSharePortfolio'/>
       </div>
       <div className='column product-status'>
         <h3>Web Sites/Apps</h3>
