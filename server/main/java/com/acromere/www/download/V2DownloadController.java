@@ -29,21 +29,23 @@ import java.util.Map;
 @RequestMapping( value = { "/download/{channel}", "/download/{channel}/v2" } )
 public class V2DownloadController {
 
-	private V2DownloadProviderFactory factory;
+	private final V2DownloadProviderFactory factory;
 
 	V2DownloadController( V2DownloadProviderFactory factory ) {
 		this.factory = factory;
 	}
 
 	@RequestMapping( method = RequestMethod.GET, path = "/catalog" )
-	public void getCatalog( HttpServletResponse response, @PathVariable( "channel" ) String channel, @RequestParam Map<String, String> query ) throws IOException {
+	public void getCatalog( HttpServletResponse response, @PathVariable String channel, @RequestParam Map<String, String> query ) throws IOException {
 		HttpStatus status = doGetCatalog( response, channel, query );
 		response.setStatus( status.value() );
 	}
 
 	@RequestMapping( method = RequestMethod.GET, path = "/cards/{artifact}" )
-	public Map<String, Object> getProductCards( @PathVariable String artifact, @RequestParam Map<String, String> query ) {
+	public Map<String, Object> getProductCards( @PathVariable String channel, @PathVariable String artifact, @RequestParam Map<String, String> query ) {
 		Map<String, Object> cards = new HashMap<>();
+
+		// TODO Why are we not using the channel to lookup product cards?
 
 		for( String key : factory.getProviders().keySet() ) {
 			V2DownloadProvider provider = factory.getProviders().get( key );
@@ -56,10 +58,10 @@ public class V2DownloadController {
 	@RequestMapping( method = RequestMethod.HEAD, path = "/{artifact}/{asset}/{format}" )
 	public void getMetadata(
 		HttpServletResponse response,
-		@PathVariable( "channel" ) String channel,
-		@PathVariable( "artifact" ) String artifact,
-		@PathVariable( "asset" ) String asset,
-		@PathVariable( "format" ) String format,
+		@PathVariable String channel,
+		@PathVariable String artifact,
+		@PathVariable String asset,
+		@PathVariable String format,
 		@RequestParam Map<String, String> query
 	) throws IOException {
 		getMetadata( response, channel, artifact, null, asset, format, query );
@@ -68,11 +70,11 @@ public class V2DownloadController {
 	@RequestMapping( method = RequestMethod.HEAD, path = "/{artifact}/{platform}/{asset}/{format}" )
 	public void getMetadata(
 		HttpServletResponse response,
-		@PathVariable( "channel" ) String channel,
-		@PathVariable( "artifact" ) String artifact,
-		@PathVariable( "platform" ) String platform,
-		@PathVariable( "asset" ) String asset,
-		@PathVariable( "format" ) String format,
+		@PathVariable String channel,
+		@PathVariable String artifact,
+		@PathVariable String platform,
+		@PathVariable String asset,
+		@PathVariable String format,
 		@RequestParam Map<String, String> query
 	) throws IOException {
 		HttpStatus status = doGetArtifact( RequestMethod.HEAD, response, channel, artifact, platform, asset, format, query );
@@ -82,10 +84,10 @@ public class V2DownloadController {
 	@GetMapping( path = "/{artifact}/{asset}/{format}" )
 	public void getArtifact(
 		HttpServletResponse response,
-		@PathVariable( "channel" ) String channel,
-		@PathVariable( "artifact" ) String artifact,
-		@PathVariable( "asset" ) String asset,
-		@PathVariable( "format" ) String format,
+		@PathVariable String channel,
+		@PathVariable String artifact,
+		@PathVariable String asset,
+		@PathVariable String format,
 		@RequestParam Map<String, String> query
 	) throws IOException {
 		getArtifact( response, channel, artifact, null, asset, format, query );
@@ -94,11 +96,11 @@ public class V2DownloadController {
 	@GetMapping( path = "/{artifact}/{platform}/{asset}/{format}" )
 	public void getArtifact(
 		HttpServletResponse response,
-		@PathVariable( "channel" ) String channel,
-		@PathVariable( "artifact" ) String artifact,
-		@PathVariable( "platform" ) String platform,
-		@PathVariable( "asset" ) String asset,
-		@PathVariable( "format" ) String format,
+		@PathVariable String channel,
+		@PathVariable String artifact,
+		@PathVariable String platform,
+		@PathVariable String asset,
+		@PathVariable String format,
 		@RequestParam Map<String, String> query
 	) throws IOException {
 		HttpStatus status = doGetArtifact( RequestMethod.GET, response, channel, artifact, platform, asset, format, query );
@@ -143,7 +145,14 @@ public class V2DownloadController {
 	}
 
 	private HttpStatus doGetArtifact(
-		RequestMethod method, HttpServletResponse response, String channel, String artifact, String platform, String asset, String format, Map<String, String> query
+		RequestMethod method,
+		HttpServletResponse response,
+		String channel,
+		String artifact,
+		String platform,
+		String asset,
+		String format,
+		Map<String, String> query
 	) throws IOException {
 		V2DownloadProvider provider = factory.getProviders().get( channel );
 		if( provider == null ) log.atWarn().log( "The download provider is null: %s", channel );
