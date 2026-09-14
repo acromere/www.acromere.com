@@ -1,6 +1,6 @@
 import {cleanup, render, screen} from '@testing-library/react'
 import App from './App'
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
 test('renders application', () => {
 	// given
