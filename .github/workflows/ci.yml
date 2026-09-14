@@ -58,8 +58,8 @@ jobs:
           node-version: ${{env.NODE_VERSION}}
           cache: 'npm'
 
-      - name: Install
-        run: npm install
+      - name: Update
+        run: npm ci
 
       - name: Build
         run: npm run build
