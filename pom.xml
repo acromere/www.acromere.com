@@ -43,10 +43,6 @@
 			<groupId>com.acromere</groupId>
 			<artifactId>zenna</artifactId>
 		</dependency>
-		<!--        <dependency>-->
-		<!--            <groupId>com.acromere</groupId>-->
-		<!--            <artifactId>zerra</artifactId>-->
-		<!--        </dependency>-->
 		<dependency>
 			<groupId>com.acromere</groupId>
 			<artifactId>zevra</artifactId>
