@@ -19,15 +19,15 @@ export default function Status() {
         <StatusTag ident='zevra' icon={Icon.ZEVRA} name='Zevra'/>
       </div>
       <div className='column product-status'>
-        <h3>Xenon Modules</h3>
+        <h3>Production Modules</h3>
         <StatusTag ident='acorn' icon={Icon.ACORN} name='Acorn'/>
-        <StatusTag ident='aveon' icon={Icon.AVEON} name='Aveon'/>
         <StatusTag ident='carta' icon={Icon.CARTA} name='Cartesia'/>
+        <StatusTag ident='sonic' icon={Icon.SONIC} name='Sonic Candle'/>
+        <h3>Demonstration Modules</h3>
+        <StatusTag ident='aveon' icon={Icon.AVEON} name='Aveon'/>
         <StatusTag ident='mazer' icon={Icon.MAZER} name='Mazer'/>
         <StatusTag ident='recon' icon={Icon.RECON} name='Recon'/>
         <StatusTag ident='sysup' icon={Icon.SYSUP} name='Sysup'/>
-        <h3>Partner Modules</h3>
-        <StatusTag ident='HyperSynesthesia' icon={Icon.HYPERS} name='HyperSynesthesia' org='EurydiceSharePortfolio'/>
       </div>
       <div className='column product-status'>
         <h3>Web Sites/Apps</h3>

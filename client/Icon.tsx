@@ -28,13 +28,12 @@ export default class Icon {
 
   static SEENC_LIGHT = new URL( Config.ICON_ROOT + '/latest/seenc/product/icon?theme=light', import.meta.url);
   static SEENC_DARK = new URL( Config.ICON_ROOT + '/latest/seenc/product/icon?theme=dark', import.meta.url);
+  static SONIC_LIGHT = new URL( Config.ICON_ROOT + '/latest/sonic/product/icon?theme=light', import.meta.url);
+  static SONIC_DARK = new URL( Config.ICON_ROOT + '/latest/sonic/product/icon?theme=dark', import.meta.url);
   static WEAVE_LIGHT = new URL( Config.ICON_ROOT + '/latest/weave/product/icon?theme=light', import.meta.url);
   static WEAVE_DARK = new URL( Config.ICON_ROOT + '/latest/weave/product/icon?theme=dark', import.meta.url);
   static XENON_LIGHT = new URL( Config.ICON_ROOT + '/latest/xenon/product/icon?theme=light', import.meta.url);
   static XENON_DARK = new URL( Config.ICON_ROOT + '/latest/xenon/product/icon?theme=dark', import.meta.url);
-
-  static HYPERS_LIGHT = new URL( 'https://hypersynesthesia.com/logo-hyper-synesthesia-final.svg', import.meta.url);
-  static HYPERS_DARK = new URL( 'https://hypersynesthesia.com/logo-hyper-synesthesia-final.svg', import.meta.url);
 
   static DSR_LIGHT = new URL( 'https://www.desertskyrangers.org/logo.png', import.meta.url);
   static DSR_DARK = new URL( 'https://www.desertskyrangers.org/logo.png', import.meta.url);
@@ -87,13 +86,6 @@ export default class Icon {
   )
   static EMPTY = <img src={Icon.EMPTY_PIXEL.toString()} className='icon' alt=''/>
   static FROWN = <FontAwesomeIcon className='icon' icon={['fas', 'frown']}/>;
-  static HYPERS = (
-    <picture>
-      <source srcSet={Icon.HYPERS_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
-      <source srcSet={Icon.HYPERS_DARK.toString()} media="(prefers-color-scheme: dark)"/>
-      <img src="." className='icon' alt="HYP"/>
-    </picture>
-  )
   static MODULE = Icon.LOGO;
   static MAZER = (
     <picture>
@@ -115,6 +107,13 @@ export default class Icon {
       <source srcSet={Icon.SEENC_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
       <source srcSet={Icon.SEENC_DARK.toString()} media="(prefers-color-scheme: dark)"/>
       <img src="." className='icon' alt="ACM"/>
+    </picture>
+  )
+  static SONIC = (
+    <picture>
+      <source srcSet={Icon.SONIC_LIGHT.toString()} media="(prefers-color-scheme: light)"/>
+      <source srcSet={Icon.SONIC_DARK.toString()} media="(prefers-color-scheme: dark)"/>
+      <img src="." className='icon' alt="SON"/>
     </picture>
   )
   static SYSUP = Icon.LOGO;
