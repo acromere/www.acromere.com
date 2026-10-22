@@ -4,10 +4,14 @@ import {fas} from '@fortawesome/free-solid-svg-icons'
 import {far} from '@fortawesome/free-regular-svg-icons'
 import {fab} from '@fortawesome/free-brands-svg-icons'
 import Config from './Config';
+import React from "react";
 
 FontAwesomeLibrary.add(fas, far, fab)
 
 export default class Icon {
+
+  static API = <FontAwesomeIcon icon={['fas', 'tools']}/>;
+
   // URL Definitions
   static EMPTY_PIXEL = new URL('./image/1x1.png', import.meta.url);
   //static LOGO_LIGHT = new URL('./image/logo-light.png', import.meta.url);

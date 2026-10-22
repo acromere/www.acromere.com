@@ -1,4 +1,5 @@
 import {ReactElement} from "react";
+import Icon from '../Icon';
 
 export default function StatusTag(props: { ident: string; icon: ReactElement<any, any>; name: string; org?: string }) {
   let org = props.org;
@@ -17,6 +18,9 @@ export default function StatusTag(props: { ident: string; icon: ReactElement<any
           <img alt={props.name + " Build Status"} src={"https://github.com/"+ org + "/" + props.ident + "/actions/workflows/ci.yml/badge.svg"}/>
         </a>
       </div>
+      <a href={"https://www.acromere.com/product/" + props.ident + "/docs/api/index.html"}>
+        <span className='icon'>{Icon.API}</span>
+      </a>
     </div>
   )
 }
