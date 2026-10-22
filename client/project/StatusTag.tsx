@@ -1,4 +1,4 @@
-import {ReactElement} from "react";
+import React, {ReactElement} from "react";
 import Icon from '../Icon';
 
 export default function StatusTag(props: { ident: string; icon: ReactElement<any, any>; name: string; org?: string }) {
@@ -12,15 +12,17 @@ export default function StatusTag(props: { ident: string; icon: ReactElement<any
       <a href={"https://github.com/"+ org + "/" + props.ident}>
         <span className='product-icon'>{props.icon}</span>
       </a>
+      <div className='javadoc'>
+      <a href={"https://www.acromere.com/product/" + props.ident + "/docs/api/index.html"}>
+        <span className='icon'>{Icon.API}</span>
+      </a>
+      </div>
       <div className='body'>
         {/*<h6>{props.name}</h6>*/}
         <a href={'https://github.com/'+ org + '/' + props.ident + '/actions/workflows/ci.yml'}>
           <img alt={props.name + " Build Status"} src={"https://github.com/"+ org + "/" + props.ident + "/actions/workflows/ci.yml/badge.svg"}/>
         </a>
       </div>
-      <a href={"https://www.acromere.com/product/" + props.ident + "/docs/api/index.html"}>
-        <span className='icon'>{Icon.API}</span>
-      </a>
     </div>
   )
 }
