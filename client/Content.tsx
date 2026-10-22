@@ -51,9 +51,6 @@ export function Content() {
             <Route path='status' element={<Status/>}/>
           </Route>
 
-          {/* API documentation routes */}
-          {/*<Route path='*/docs/api/*' element={<Navigate to={window.location.pathname}/>}/>*/}
-
           <Route path='/about' element={<About/>}/>
           <Route path='/legal' element={<Legal/>}/>
           <Route path='/license'>
