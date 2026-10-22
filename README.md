@@ -15,9 +15,15 @@ To run the front end locally, follow these steps:
 
 1. Clone the repository
 2. Install dependencies with `npm install`
-3. Start the development server with `npm start`
+3. Start the development server with `npm run dev`
 
 # Back End
 
 The back end is a Java-based application that provides the core functionality of 
 the Acromere website. It mainly supports the Xenon repository capabilities.
+
+To run the back end locally, follow these steps:
+
+1. Clone the repository
+2. Build the application with `mvn package` 
+3. Start the application with `mvn spring-boot:run`
