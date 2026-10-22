@@ -25,7 +25,8 @@ cp $SERVER_SOURCE/application.yml $SERVER_TARGET/application.yml
 cp $SERVER_SOURCE/$SERVICE.conf $SERVER_TARGET/$SERVICE.conf
 rm $SERVER_SOURCE/publish.flag
 
-chown nova:nova $SERVER_TARGET/*
+# Changing ownership breaks the logging because the service is running as acm
+#chown nova:nova $SERVER_TARGET/*
 
 systemctl daemon-reload
 systemctl restart $SERVICE.service
