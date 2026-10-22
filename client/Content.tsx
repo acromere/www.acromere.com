@@ -52,7 +52,7 @@ export function Content() {
           </Route>
 
           {/* API documentation routes */}
-          <Route path='*/docs/api/*' element={<Navigate to={window.location.pathname}/>}/>
+          {/*<Route path='*/docs/api/*' element={<Navigate to={window.location.pathname}/>}/>*/}
 
           <Route path='/about' element={<About/>}/>
           <Route path='/legal' element={<Legal/>}/>
