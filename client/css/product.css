@@ -129,21 +129,7 @@
 	/* along the main axis */
 	justify-content: left;
 	/* along the cross axis */
-	align-items: stretch;
-}
-
-.project-bar .body {
-	padding: 0 0 0 1rem;
-	display: flex;
-	flex-flow: column nowrap;
-	/* along the main axis */
-	justify-content: center;
-	/* along the cross axis */
-	align-items: flex-start;
-}
-
-.project-bar-bar .body div {
-	padding: 0.5rem 0 0.5rem 0;
+	align-items: center;
 }
 
 .project-bar .product-icon .icon {
@@ -151,3 +137,16 @@
 	height: 2rem;
 }
 
+.javadoc .icon {
+	padding: 0 0 0 0.3rem;
+}
+
+.project-bar .body {
+	padding: 0 0 0 0.2rem;
+	display: flex;
+	flex-flow: column nowrap;
+	/* along the main axis */
+	justify-content: center;
+	/* along the cross axis */
+	align-items: flex-start;
+}
