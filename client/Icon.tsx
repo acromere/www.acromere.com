@@ -10,7 +10,8 @@ FontAwesomeLibrary.add(fas, far, fab)
 
 export default class Icon {
 
-  static API = <FontAwesomeIcon className='icon' icon={['fas', 'tools']}/>;
+  // static API = <FontAwesomeIcon className='icon' icon={['fas', 'tools']}/>;
+  static JAVADOC = <FontAwesomeIcon className='icon' icon={['fab', 'java']}/>;
 
   // URL Definitions
   static EMPTY_PIXEL = new URL('./image/1x1.png', import.meta.url);
