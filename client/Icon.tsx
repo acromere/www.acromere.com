@@ -10,40 +10,44 @@ FontAwesomeLibrary.add(fas, far, fab)
 
 export default class Icon {
 
-  static API = <FontAwesomeIcon className='icon' icon={['fas', 'tools']}/>;
+  // static API = <FontAwesomeIcon className='icon' icon={['fas', 'tools']}/>;
+  static JAVADOC = <span className="fa-layers fa-fw">
+    {/*<FontAwesomeIcon className='icon light-text' icon={['fas', 'file']}/>*/}
+    <FontAwesomeIcon className='icon light-text' icon={['fab', 'java']}/>
+  </span>
 
   // URL Definitions
   static EMPTY_PIXEL = new URL('./image/1x1.png', import.meta.url);
   //static LOGO_LIGHT = new URL('./image/logo-light.png', import.meta.url);
   //static LOGO_DARK = new URL('./image/logo-dark.png', import.meta.url);
-  static LOGO_LIGHT = new URL( Config.ICON_ROOT + '/latest/www.acromere.com/product/icon?theme=light', import.meta.url);
-  static LOGO_DARK = new URL( Config.ICON_ROOT + '/latest/www.acromere.com/product/icon?theme=dark', import.meta.url);
+  static LOGO_LIGHT = new URL(Config.ICON_ROOT + '/latest/www.acromere.com/product/icon?theme=light', import.meta.url);
+  static LOGO_DARK = new URL(Config.ICON_ROOT + '/latest/www.acromere.com/product/icon?theme=dark', import.meta.url);
 
-  static ACORN_LIGHT = new URL( Config.ICON_ROOT + '/latest/acorn/product/icon?theme=light', import.meta.url);
-  static ACORN_DARK = new URL( Config.ICON_ROOT + '/latest/acorn/product/icon?theme=dark', import.meta.url);
-  static AVEON_LIGHT = new URL( Config.ICON_ROOT + '/latest/aveon/product/icon?theme=light', import.meta.url);
-  static AVEON_DARK = new URL( Config.ICON_ROOT + '/latest/aveon/product/icon?theme=dark', import.meta.url);
-  static CARTA_LIGHT = new URL( Config.ICON_ROOT + '/latest/carta/product/icon?theme=light', import.meta.url);
-  static CARTA_DARK = new URL( Config.ICON_ROOT + '/latest/carta/product/icon?theme=dark', import.meta.url);
-  static MAZER_LIGHT = new URL( Config.ICON_ROOT + '/latest/mazer/product/icon?theme=light', import.meta.url);
-  static MAZER_DARK = new URL( Config.ICON_ROOT + '/latest/mazer/product/icon?theme=dark', import.meta.url);
-  static RECON_LIGHT = new URL( Config.ICON_ROOT + '/latest/recon/product/icon?theme=light', import.meta.url);
-  static RECON_DARK = new URL( Config.ICON_ROOT + '/latest/recon/product/icon?theme=dark', import.meta.url);
+  static ACORN_LIGHT = new URL(Config.ICON_ROOT + '/latest/acorn/product/icon?theme=light', import.meta.url);
+  static ACORN_DARK = new URL(Config.ICON_ROOT + '/latest/acorn/product/icon?theme=dark', import.meta.url);
+  static AVEON_LIGHT = new URL(Config.ICON_ROOT + '/latest/aveon/product/icon?theme=light', import.meta.url);
+  static AVEON_DARK = new URL(Config.ICON_ROOT + '/latest/aveon/product/icon?theme=dark', import.meta.url);
+  static CARTA_LIGHT = new URL(Config.ICON_ROOT + '/latest/carta/product/icon?theme=light', import.meta.url);
+  static CARTA_DARK = new URL(Config.ICON_ROOT + '/latest/carta/product/icon?theme=dark', import.meta.url);
+  static MAZER_LIGHT = new URL(Config.ICON_ROOT + '/latest/mazer/product/icon?theme=light', import.meta.url);
+  static MAZER_DARK = new URL(Config.ICON_ROOT + '/latest/mazer/product/icon?theme=dark', import.meta.url);
+  static RECON_LIGHT = new URL(Config.ICON_ROOT + '/latest/recon/product/icon?theme=light', import.meta.url);
+  static RECON_DARK = new URL(Config.ICON_ROOT + '/latest/recon/product/icon?theme=dark', import.meta.url);
 
-  static SEENC_LIGHT = new URL( Config.ICON_ROOT + '/latest/seenc/product/icon?theme=light', import.meta.url);
-  static SEENC_DARK = new URL( Config.ICON_ROOT + '/latest/seenc/product/icon?theme=dark', import.meta.url);
-  static SONIC_LIGHT = new URL( Config.ICON_ROOT + '/latest/sonic/product/icon?theme=light', import.meta.url);
-  static SONIC_DARK = new URL( Config.ICON_ROOT + '/latest/sonic/product/icon?theme=dark', import.meta.url);
-  static WEAVE_LIGHT = new URL( Config.ICON_ROOT + '/latest/weave/product/icon?theme=light', import.meta.url);
-  static WEAVE_DARK = new URL( Config.ICON_ROOT + '/latest/weave/product/icon?theme=dark', import.meta.url);
-  static XENON_LIGHT = new URL( Config.ICON_ROOT + '/latest/xenon/product/icon?theme=light', import.meta.url);
-  static XENON_DARK = new URL( Config.ICON_ROOT + '/latest/xenon/product/icon?theme=dark', import.meta.url);
+  static SEENC_LIGHT = new URL(Config.ICON_ROOT + '/latest/seenc/product/icon?theme=light', import.meta.url);
+  static SEENC_DARK = new URL(Config.ICON_ROOT + '/latest/seenc/product/icon?theme=dark', import.meta.url);
+  static SONIC_LIGHT = new URL(Config.ICON_ROOT + '/latest/sonic/product/icon?theme=light', import.meta.url);
+  static SONIC_DARK = new URL(Config.ICON_ROOT + '/latest/sonic/product/icon?theme=dark', import.meta.url);
+  static WEAVE_LIGHT = new URL(Config.ICON_ROOT + '/latest/weave/product/icon?theme=light', import.meta.url);
+  static WEAVE_DARK = new URL(Config.ICON_ROOT + '/latest/weave/product/icon?theme=dark', import.meta.url);
+  static XENON_LIGHT = new URL(Config.ICON_ROOT + '/latest/xenon/product/icon?theme=light', import.meta.url);
+  static XENON_DARK = new URL(Config.ICON_ROOT + '/latest/xenon/product/icon?theme=dark', import.meta.url);
 
-  static DSR_LIGHT = new URL( 'https://www.desertskyrangers.org/logo.png', import.meta.url);
-  static DSR_DARK = new URL( 'https://www.desertskyrangers.org/logo.png', import.meta.url);
+  static DSR_LIGHT = new URL('https://www.desertskyrangers.org/logo.png', import.meta.url);
+  static DSR_DARK = new URL('https://www.desertskyrangers.org/logo.png', import.meta.url);
 
-  static WEATHER_LIGHT = new URL( 'https://wx.acromere.com/image/favicon.png', import.meta.url);
-  static WEATHER_DARK = new URL( 'https://wx.acromere.com/image/favicon.png', import.meta.url);
+  static WEATHER_LIGHT = new URL('https://wx.acromere.com/image/favicon.png', import.meta.url);
+  static WEATHER_DARK = new URL('https://wx.acromere.com/image/favicon.png', import.meta.url);
 
   // Needs to be defined before other icons
   static BROKEN = <FontAwesomeIcon className='icon broken' icon={['fas', 'link-slash']}/>;

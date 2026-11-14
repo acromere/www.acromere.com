@@ -14,7 +14,7 @@ export default function StatusTag(props: { ident: string; icon: ReactElement<any
       </a>
       <div className='javadoc'>
       <a href={"https://www.acromere.com/product/" + props.ident + "/docs/api/index.html"}>
-        <span className='icon'>{Icon.API}</span>
+        <span className='icon'>{Icon.JAVADOC}</span>
       </a>
       </div>
       <div className='body'>
